@@ -3,58 +3,72 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerMovementState
-{
+public class PlayerMovementState {
+
     private float xchange;
 
-    public PlayerMovementState()
-    {
+    public PlayerMovementState() {
         xchange = 0f;
     }
 
-    public PlayerMovementState update(GameObject obj)
-    {
+    public PlayerMovementState update(GameObject playerObj, PlayerMain player) {
         if (Input.GetKey(KeyCode.D)) xchange = 1.0f;
         else if (Input.GetKey(KeyCode.A)) xchange = -1.0f;
         else if (xchange > 0.01f) xchange = Math.Max(0f, xchange - 1.0f * Time.deltaTime);
         else if (xchange < -0.01f) xchange = Math.Min(0f, xchange + 1.0f * Time.deltaTime);
         else xchange = 0;
 
-        obj.transform.position = obj.transform.position + new Vector3(xchange * Time.deltaTime, 0, 0);
+        playerObj.transform.position = playerObj.transform.position + new Vector3(xchange * Time.deltaTime, 0, 0);
 
-        return stateUpdate(obj);
+        return stateUpdate(playerObj, player);
     }
 
-    public virtual PlayerMovementState stateUpdate(GameObject obj) {
+    public virtual PlayerMovementState stateUpdate(GameObject playerObj, PlayerMain player) {
         return this;
     }
 }
 
 public class Jump : PlayerMovementState {
+
     bool jumped;
 
     public Jump() {
         jumped = false;
     }
 
-    public override PlayerMovementState stateUpdate(GameObject obj) {
+    public override PlayerMovementState stateUpdate(GameObject playerObj, PlayerMain player) {
 
         // update character
         if (!jumped) {
-            obj.transform.position = obj.transform.position + new Vector3(0, 10f, 0);
+            playerObj.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 300f);
             jumped = true;
         }
+        else if (playerObj.GetComponent<Rigidbody2D>().linearVelocity.y < 0) return new Fall();
 
         return this;
     }
 
 }
 
-public class Idle : PlayerMovementState
-{
-    public override PlayerMovementState stateUpdate(GameObject obj)
-    {
+public class Fall : PlayerMovementState {
+    
+    public override PlayerMovementState stateUpdate(GameObject playerObj, PlayerMain player) {
+
+        // update character
+    
+        if (player.isGrounded) return new Idle();
+
+    
+        return this;
+    }
+}
+
+public class Idle : PlayerMovementState {
+
+    public override PlayerMovementState stateUpdate(GameObject playerObj, PlayerMain player) {
+
         if (Input.GetKey(KeyCode.W)) return new Jump();
+
         return this;
     }
 }

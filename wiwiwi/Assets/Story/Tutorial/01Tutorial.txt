@@ -1,0 +1,39 @@
+{
+    "dialogue": [
+        {
+            "character": "narrator",
+            "emotion": null,
+            "text": "Once upon a time, a little mouse was eating alone all in her little burrow.",
+            "sound": null
+        },
+        {
+            "character": "player",
+            "emotion": "sad",
+            "text": "Oh my GYATT i made too much soup AGAINN!!!",
+            "sound": null
+        },
+        {
+            "character": "player",
+            "emotion": "sad",
+            "text": "Oh woe is me how I wish I wasnt an orphan so I dont have to eat by myself",
+            "sound": null
+        },
+        {
+            "character": "unknown",
+            "emotion": null,
+            "text": "knock knock",
+            "sound": "knock"
+        },
+        {
+            "character": "player",
+            "emotion": "shock",
+            "text": "Who could it be?",
+            "sound": null
+        }
+    ],
+    "goal": {
+        "type": "interact",
+        "character": "Mr. Mole",
+        "next": "02Tutorial"
+    }
+}
