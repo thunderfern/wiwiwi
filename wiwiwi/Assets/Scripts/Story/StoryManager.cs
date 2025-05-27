@@ -11,8 +11,6 @@ public class StoryManager : MonoBehaviour {
 
     // Singleton
 
-    public List<TextAsset> storyFiles;
-
     private static StoryManager _instance;
 
     private StoryManager() {
@@ -27,7 +25,14 @@ public class StoryManager : MonoBehaviour {
         return _instance;
     }
 
+    // Fields
+
+    public List<TextAsset> storyFiles;
+
     public void read(StoryPart storyPart) {
-        DialogueManager.instance().updateDialogue(JSONParser.parseText(storyFiles[(int)storyPart]));
+
+        TextAsset parseFile = storyFiles[(int)storyPart];
+        
+        DialogueManager.instance().updateDialogue(JSONParser.parseStory(storyFiles[(int)storyPart]).Item1);
     }
 }

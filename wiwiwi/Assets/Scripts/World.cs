@@ -10,8 +10,11 @@ public enum Character
 
 public enum GameState
 {
-    Playing,
-    Dialogue
+    Dialogue,
+    Platformer,
+    Cooking,
+    Farming,
+    Fishing
 }
 
 public class World : MonoBehaviour {
@@ -33,6 +36,7 @@ public class World : MonoBehaviour {
     }
 
     public GameState curstate;
+    public GameState prevstate;
     public Goal currentGoal;
     public StoryManager storyManager;
     public DialogueManager dialogueManager;

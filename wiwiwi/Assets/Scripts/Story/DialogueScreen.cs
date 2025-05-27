@@ -13,7 +13,7 @@ public class DialogueScreen
     public string dialogueText;
     // add sound
 
-    public DialogueScreen(string character, string emotion, string dialogueText, string sound) {
+    public DialogueScreen(string character, string emotion,  string sound, string dialogueText) {
 
         switch (character)
         {
