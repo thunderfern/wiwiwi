@@ -28,6 +28,7 @@ public class DialogueManager : MonoBehaviour {
     public List<DialogueScreen> dialogueStream;
 
     public void updateDialogue(List<DialogueScreen> dialogueStream) {
+        dialogueObject.SetActive(true);
         this.dialogueStream = dialogueStream;
         this.display();
     }
@@ -49,10 +50,10 @@ public class DialogueManager : MonoBehaviour {
         dialogueStream.RemoveAt(0);
         if (dialogueStream.Count == 0) {
             World.instance().curstate = World.instance().prevstate;
+            dialogueObject.SetActive(false);
             return;
         }
         display();
-        
     }
 
 }

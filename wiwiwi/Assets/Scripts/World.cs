@@ -42,7 +42,7 @@ public class World : MonoBehaviour {
     public DialogueManager dialogueManager;
 
     void Awake() {
-        this.curstate = GameState.Dialogue;
+        this.curstate = GameState.Platformer;
         this.currentGoal = new Goal();
         this.storyManager = StoryManager.instance();
         this.dialogueManager = DialogueManager.instance();

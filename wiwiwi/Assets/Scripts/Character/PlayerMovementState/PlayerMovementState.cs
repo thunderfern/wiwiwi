@@ -57,7 +57,6 @@ public class Fall : PlayerMovementState {
         // update character
     
         if (player.isGrounded) return new Idle();
-
     
         return this;
     }
@@ -66,8 +65,10 @@ public class Fall : PlayerMovementState {
 public class Idle : PlayerMovementState {
 
     public override PlayerMovementState stateUpdate(GameObject playerObj, PlayerMain player) {
+        Animator anim = playerObj.GetComponent<Animator>();
 
         if (Input.GetKey(KeyCode.W)) return new Jump();
+        anim.Play("Player Run");
 
         return this;
     }

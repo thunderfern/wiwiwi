@@ -29,10 +29,16 @@ public class StoryManager : MonoBehaviour {
 
     public List<TextAsset> storyFiles;
 
-    public void read(StoryPart storyPart) {
+    public void read(StoryPart storyPart)
+    {
 
         TextAsset parseFile = storyFiles[(int)storyPart];
-        
+
+        World world = World.instance();
+        world.prevstate = world.curstate;
+        world.curstate = GameState.Dialogue;
+
         DialogueManager.instance().updateDialogue(JSONParser.parseStory(storyFiles[(int)storyPart]).Item1);
+
     }
 }
