@@ -12,9 +12,11 @@ public class InteractMain : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+
+    // for physics
+    void FixedUpdate()
     {
-        if (Physics2D.Raycast(obj.transform.position, Vector2.left, 2.0f, mainCharacterLayer) || Physics2D.Raycast(obj.transform.position, Vector2.right, 2.0f, mainCharacterLayer)) 
+        if (Physics2D.BoxCast(obj.transform.position, Vector2.left, new Vector2(2f, 2f), , mainCharacterLayer)) 
         {
             Debug.Log("ayy");
         }

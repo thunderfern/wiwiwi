@@ -6,16 +6,19 @@ using System;
 public class PlayerMovementState {
 
     private float xchange;
+    private float playerSpeed;
 
-    public PlayerMovementState() {
+    public PlayerMovementState()
+    {
+        playerSpeed = 4f;
         xchange = 0f;
     }
 
     public PlayerMovementState update(GameObject playerObj, PlayerMain player) {
-        if (Input.GetKey(KeyCode.D)) xchange = 1.0f;
-        else if (Input.GetKey(KeyCode.A)) xchange = -1.0f;
-        else if (xchange > 0.01f) xchange = Math.Max(0f, xchange - 1.0f * Time.deltaTime);
-        else if (xchange < -0.01f) xchange = Math.Min(0f, xchange + 1.0f * Time.deltaTime);
+        if (Input.GetKey(KeyCode.D)) xchange = playerSpeed;
+        else if (Input.GetKey(KeyCode.A)) xchange = -playerSpeed;
+        else if (xchange > 0.01f) xchange = Math.Max(0f, xchange - playerSpeed * 2 * Time.deltaTime);
+        else if (xchange < -0.01f) xchange = Math.Min(0f, xchange + playerSpeed * 2 * Time.deltaTime);
         else xchange = 0;
 
         playerObj.transform.position = playerObj.transform.position + new Vector3(xchange * Time.deltaTime, 0, 0);

@@ -27,7 +27,8 @@ public class DialogueManager : MonoBehaviour {
     public GameObject dialogueObject;
     public List<DialogueScreen> dialogueStream;
 
-    public void updateDialogue(List<DialogueScreen> dialogueStream) {
+    public void updateDialogue(List<DialogueScreen> dialogueStream)
+    {
         dialogueObject.SetActive(true);
         this.dialogueStream = dialogueStream;
         this.display();
