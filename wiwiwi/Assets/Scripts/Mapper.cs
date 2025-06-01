@@ -15,7 +15,9 @@ public enum GameState
     Platformer,
     Cooking,
     Farming,
-    Fishing
+    Fishing,
+    Recipe,
+    Inventory
 }
 
 public enum GoalType {
@@ -49,6 +51,7 @@ public class Mapper
     // Maps
 
     public Dictionary<string, Character> characterMap;
+    public Dictionary<string, GameState> gameStateMap;
     public Dictionary<string, Collectible> objectMap;
     public Dictionary<string, GoalType> goalTypeMap;
     public Dictionary<string, Emotion> emotionMap;
@@ -63,10 +66,10 @@ public class Mapper
 
         characterMap = new Dictionary<string, Character>()
         {
-            { "player", Character.Player },
-            { "mrmole", Character.MrMole },
-            { "narrator", Character.Narrator },
-            { "unknown", Character.Unknown },
+            { "Player", Character.Player },
+            { "Mr. Mole", Character.MrMole },
+            { "Narrator", Character.Narrator },
+            { "Unknown", Character.Unknown },
         };
 
         goalTypeMap = new Dictionary<string, GoalType>()

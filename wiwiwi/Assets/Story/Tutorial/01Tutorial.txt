@@ -1,26 +1,26 @@
 DIALOGUE
 
-narrator
+Narrator
 null
 null
 Once upon a time, a little mouse was eating alone all in her little burrow.
 
-player
+Player
 shocked
 null
 Oh my GYATT i made too much soup AGAINN!!!
 
-player
+Player
 sad
 null
 Oh woe is me how I wish I wasnt an orphan so I dont have to eat by myself
 
-unknown
+Unknown
 null
 knock
 knock knock
 
-player
+Player
 neutral
 null
 Who could it be?

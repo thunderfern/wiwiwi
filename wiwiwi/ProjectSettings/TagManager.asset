@@ -14,7 +14,7 @@ TagManager:
   - Ground
   - MainCharacter
   - Dialogue
-  - 
+  - Recipe
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Dialogue
     uniqueID: 3942493237
+    locked: 0
+  - name: Recipe
+    uniqueID: 3420428445
     locked: 0
   m_RenderingLayers:
   - Default

@@ -26,7 +26,7 @@ public class World : MonoBehaviour {
     public StoryManager storyManager;
     public DialogueManager dialogueManager;
 
-    void Awake() {
+    void Start() {
         this.curstate = GameState.Platformer;
         this.goal = new Goal();
         this.storyManager = StoryManager.instance();
