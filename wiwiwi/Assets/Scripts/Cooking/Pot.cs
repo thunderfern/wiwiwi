@@ -6,6 +6,7 @@ public class Pot : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //private string[,] soup = new { };
     public string[] ingredients = new string[3];
+    public GameObject[] InventoryBoxes;
     public string ingredientName = "";
     public bool click;
 
@@ -16,6 +17,7 @@ public class Pot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        updateInventoryBoxes();
 
     }
 
@@ -35,8 +37,8 @@ public class Pot : MonoBehaviour
             {
                 tryAdd(ingredientName);
                 Destroy(other.gameObject);
-                    
-                
+
+
 
 
             }
@@ -56,5 +58,18 @@ public class Pot : MonoBehaviour
                 break;
             }
         }
+    }
+
+    void updateInventoryBoxes()
+    {
+        for (int i = 0; i < InventoryBoxes.Length; i++)
+        {
+            InventoryBoxes[i].GetComponent<InventoryBox>().ChangeIngredient(ingredients[i]);
+        }
+    }
+
+    public void deleteIngredient(int Slot)
+    {
+        ingredients[Slot] = "";
     }
 }

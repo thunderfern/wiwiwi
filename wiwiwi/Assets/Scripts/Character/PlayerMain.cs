@@ -23,10 +23,10 @@ public class PlayerMain : MonoBehaviour {
 
     // For physics updates
     void FixedUpdate() {
-        if (World.instance().curstate == GameState.Platformer) {
+        //if (World.instance().curstate == GameState.Platformer) {
             updateGroundState();
             movementState = movementState.update(obj, this);
-        }
+        //}
     }
 }
 
