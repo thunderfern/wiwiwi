@@ -14,6 +14,5 @@ public class DialogueScreen {
         this.emotion = Mapper.instance().emotionMap[emotion];
         this.dialogueText = dialogueText;
         this.characterString = character;
-
     }
 }

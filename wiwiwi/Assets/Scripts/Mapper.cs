@@ -44,6 +44,13 @@ public enum Emotion
 public enum Collectible
 {
     Mushroom,
+    Onion,
+    Tomato,
+    Carrot,
+    Basil,
+    Swordfish,
+    Cod,
+    Seaweed
 }
 
 public class Mapper
