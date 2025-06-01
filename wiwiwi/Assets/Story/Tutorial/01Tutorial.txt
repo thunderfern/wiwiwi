@@ -6,7 +6,7 @@ null
 Once upon a time, a little mouse was eating alone all in her little burrow.
 
 player
-sad
+shocked
 null
 Oh my GYATT i made too much soup AGAINN!!!
 
@@ -21,11 +21,11 @@ knock
 knock knock
 
 player
-shock
+neutral
 null
 Who could it be?
 
 GOAL
 interact
-Mr. Mole
+mrmole
 02Tutorial

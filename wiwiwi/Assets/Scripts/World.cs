@@ -2,21 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum Character
-{
-    Player,
-    MrMole
-};
-
-public enum GameState
-{
-    Dialogue,
-    Platformer,
-    Cooking,
-    Farming,
-    Fishing
-}
-
 public class World : MonoBehaviour {
     
     // Singleton
@@ -37,13 +22,13 @@ public class World : MonoBehaviour {
 
     public GameState curstate;
     public GameState prevstate;
-    public Goal currentGoal;
+    public Goal goal;
     public StoryManager storyManager;
     public DialogueManager dialogueManager;
 
     void Awake() {
         this.curstate = GameState.Platformer;
-        this.currentGoal = new Goal();
+        this.goal = new Goal();
         this.storyManager = StoryManager.instance();
         this.dialogueManager = DialogueManager.instance();
         this.storyManager.read(StoryPart.Tutorial01);

@@ -1,24 +1,21 @@
 using UnityEngine;
 
-public class InteractMain : MonoBehaviour {
+public class InteractMain {
 
     public LayerMask mainCharacterLayer;
     public GameObject obj;
+    public bool interactable;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public InteractMain(GameObject obj, LayerMask layermask)
     {
-        
+        this.mainCharacterLayer = layermask;
+        this.obj = obj;
     }
 
-    // Update is called once per frame
-
-    // for physics
-    void FixedUpdate()
+    public bool allowInteraction()
     {
-        if (Physics2D.BoxCast(obj.transform.position, Vector2.left, new Vector2(2f, 2f), , mainCharacterLayer)) 
-        {
-            Debug.Log("ayy");
-        }
+        if (!interactable) return false;
+        if (Physics2D.Raycast(obj.transform.position, Vector2.left, 2f, mainCharacterLayer)) return true;
+        return false;
     }
 }

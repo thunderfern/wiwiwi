@@ -21,12 +21,11 @@ public class JSONParser {
             if (lines[i].Equals("DIALOGUE")) currentRead = "DIALOGUE";
                 else if (lines[i].Equals("GOAL")) currentRead = "GOAL";
                 else if (currentRead.Equals("DIALOGUE")) {
-                    DialogueScreen tmp = new DialogueScreen(lines[i], lines[i + 1], lines[i + 2], lines[i + 3]);
+                    DialogueScreen tmp = new DialogueScreen(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim(), lines[i + 3].Trim());
                     i += 3;
                     tmplist.Add(tmp);
                 }
         }
-        Debug.Log(tmplist.Count);
         
         return (tmplist, tmpgoal);
         

@@ -1,11 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StoryPart {
-    Tutorial01,
-    Tutorial02,
-    Tutorial03
-};
+
 
 public class StoryManager : MonoBehaviour {
 
