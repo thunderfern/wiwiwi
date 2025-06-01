@@ -3,7 +3,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private GameObject mushroom;
+    [SerializeField] private GameObject vegetable;
     void Start()
     {
 
@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        GameObject m = GameObject.Instantiate(mushroom);
+        GameObject g = GameObject.Instantiate(vegetable);
     }
     
 }

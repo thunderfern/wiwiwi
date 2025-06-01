@@ -3,9 +3,11 @@ using UnityEngine;
 public class Drag : MonoBehaviour
 {
     private bool touchingPot;
-    private bool holding;
+    public bool holding;
     private Camera cam;
     private Vector2 pos;
+
+    [SerializeField] public string IDName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,8 +51,8 @@ public class Drag : MonoBehaviour
 
     }
     
-    public string Name()
+    public string IngredientName()
     {
-        return "Mushroom";
+        return IDName;
     }
 }
