@@ -6492,6 +6492,7 @@ GameObject:
   - component: {fileID: 1187371424}
   - component: {fileID: 1187371428}
   - component: {fileID: 1187371427}
+  - component: {fileID: 1187371429}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -6559,6 +6560,19 @@ MonoBehaviour:
   prevstate: 0
   storyManager: {fileID: 0}
   dialogueManager: {fileID: 0}
+--- !u!114 &1187371429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187371423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf1c6a4972f73a458a9d8b2ca7c87d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1187371423}
 --- !u!1 &1270324018
 GameObject:
   m_ObjectHideFlags: 0
@@ -6807,6 +6821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446199693}
   - component: {fileID: 1446199694}
+  - component: {fileID: 1446199695}
   m_Layer: 9
   m_Name: Recipe
   m_TagString: Untagged
@@ -6846,6 +6861,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1446199692}
   closeObj: {fileID: 284499445}
+--- !u!114 &1446199695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446199692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf1c6a4972f73a458a9d8b2ca7c87d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1446199692}
 --- !u!1 &1508603985
 GameObject:
   m_ObjectHideFlags: 0
@@ -7030,6 +7058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947872199}
   - component: {fileID: 1947872200}
+  - component: {fileID: 1947872201}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -7075,12 +7104,25 @@ MonoBehaviour:
   characterPortraitRenderer: {fileID: 1508603987}
   curTextTimer: 0
   playerSprites:
-  - {fileID: 21300000, guid: cef09678963185b4ba6d2ed0c4ee493d, type: 3}
-  - {fileID: 21300000, guid: abada25fac7a8754da36a6f279f22d45, type: 3}
   - {fileID: 21300000, guid: 155a5dd169d755146b055383c2220d03, type: 3}
+  - {fileID: 21300000, guid: abada25fac7a8754da36a6f279f22d45, type: 3}
   - {fileID: 21300000, guid: df7c234daf7ad264086ca77d36c80aea, type: 3}
+  - {fileID: 21300000, guid: cef09678963185b4ba6d2ed0c4ee493d, type: 3}
   - {fileID: 21300000, guid: 1538b00c0e4c8604ba68c93ed83838a5, type: 3}
   - {fileID: 21300000, guid: 277e63a0f5efe174183869b2fa371f4c, type: 3}
+--- !u!114 &1947872201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947872198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf1c6a4972f73a458a9d8b2ca7c87d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1947872198}
 --- !u!1 &2027701648
 GameObject:
   m_ObjectHideFlags: 0
