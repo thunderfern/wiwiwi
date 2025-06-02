@@ -1,14 +1,15 @@
 using UnityEngine;
 
-public class RecipeIcon : MonoBehaviour
+public class PopupIcon : MonoBehaviour
 {
     private ClickMain clicker;
-    public GameObject obj;
-    public GameObject recipeObj;
+    public GameObject iconObj;
+    public GameObject popupObj;
+    public GameState targetGameState;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        clicker = new ClickMain(obj);
+        clicker = new ClickMain(iconObj);
     }
 
     // Update is called once per frame
@@ -19,8 +20,8 @@ public class RecipeIcon : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 if (World.instance().curstate != GameState.Recipe && World.instance().curstate != GameState.Inventory) World.instance().prevstate = World.instance().curstate;
-                World.instance().curstate = GameState.Recipe;
-                recipeObj.SetActive(true);
+                World.instance().curstate = targetGameState;
+                popupObj.SetActive(true);
             }
         }    
     }

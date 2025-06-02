@@ -47,10 +47,10 @@ public enum Collectible
     Onion,
     Tomato,
     Carrot,
+    Potato,
     Basil,
-    Swordfish,
-    Cod,
-    Seaweed
+    Clam,
+    Cod
 }
 
 public class Mapper
