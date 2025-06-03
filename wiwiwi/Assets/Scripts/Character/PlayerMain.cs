@@ -22,10 +22,12 @@ public class PlayerMain : MonoBehaviour {
     }
 
     // For physics updates
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         //if (World.instance().curstate == GameState.Platformer) {
-            updateGroundState();
-            movementState = movementState.update(obj, this);
+        updateGroundState();
+        movementState = movementState.update(obj, this);
+        AudioManager.instance().PlayBackground(BackgroundMusic.HappyOne);
         //}
     }
 }

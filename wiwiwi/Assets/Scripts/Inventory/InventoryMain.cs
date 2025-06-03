@@ -60,12 +60,10 @@ public class InventoryMain : MonoBehaviour
     {
         Tuple<Collectible, GameObject> tmpans;
         if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("ok\n");
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 8; i++)
             {
                 if (entryClickers[i].hover())
                 {
-                    Debug.Log("eys\n");
                     GameObject entrySpriteAns = Instantiate(sampleEntrySprite);
                     entrySpriteAns.GetComponent<SpriteRenderer>().sprite = objectSprites[i];
                     tmpans = new Tuple<Collectible, GameObject>((Collectible)(i), entrySpriteAns);
