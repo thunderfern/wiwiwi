@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class InventoryMain : MonoBehaviour
 {
@@ -9,21 +10,30 @@ public class InventoryMain : MonoBehaviour
 
     public List<Sprite> objectSprites;
     public GameObject sampleEntry;
+    public GameObject sampleEntrySprite;
 
     public List<GameObject> entries;
+    public List<ClickMain> entryClickers;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         closeObjClick = new ClickMain(closeObj);
 
-        entries.Add(sampleEntry);
-        for (int i = 1; i < 8; i++)
+        entries = new List<GameObject>();
+        entryClickers = new List<ClickMain>();
+
+        for (int i = 0; i < 8; i++)
         {
-            GameObject tmp = Instantiate(sampleEntry, sampleEntry.transform.parent);
+            GameObject tmp = Instantiate(sampleEntry);
             tmp.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[i];
             tmp.transform.position = new Vector3(sampleEntry.transform.position.x + 1.3f * (i % 3), sampleEntry.transform.position.y - 1.3f * (i / 3), sampleEntry.transform.position.z);
             entries.Add(tmp);
+        }
+        for (int i = 0; i < 8; i++)
+        {
+            ClickMain tmpClick = new ClickMain(entries[i]);
+            entryClickers.Add(tmpClick);
         }
     }
 
@@ -41,7 +51,28 @@ public class InventoryMain : MonoBehaviour
                 World.instance().curstate = World.instance().prevstate;
             }
         }
+        getItem();
 
-        
+
+    }
+
+    public Tuple<Collectible, GameObject> getItem()
+    {
+        Tuple<Collectible, GameObject> tmpans;
+        if (Input.GetMouseButtonDown(0)) {
+            Debug.Log("ok\n");
+            for (int i = 0; i < 7; i++)
+            {
+                if (entryClickers[i].hover())
+                {
+                    Debug.Log("eys\n");
+                    GameObject entrySpriteAns = Instantiate(sampleEntrySprite);
+                    entrySpriteAns.GetComponent<SpriteRenderer>().sprite = objectSprites[i];
+                    tmpans = new Tuple<Collectible, GameObject>((Collectible)(i), entrySpriteAns);
+                    return tmpans;
+                }
+            }
+        }
+        return null;
     }
 }

@@ -47,5 +47,8 @@ TagManager:
   - name: Recipe
     uniqueID: 3420428445
     locked: 0
+  - name: New Layer 3
+    uniqueID: 1328355831
+    locked: 0
   m_RenderingLayers:
   - Default
