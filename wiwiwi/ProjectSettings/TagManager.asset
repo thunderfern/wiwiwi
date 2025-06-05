@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sorting Texture
+    uniqueID: 4214528183
+    locked: 0
   - name: Dialogue
     uniqueID: 3942493237
     locked: 0
