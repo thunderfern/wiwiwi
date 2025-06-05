@@ -3,25 +3,26 @@ using UnityEngine;
 public class FarmSeedPicker : MonoBehaviour
 {
     public GameObject collectible;
-    public GameObject water;
-    public InteractMain interaction;
+    public GameObject farmSeed;
+    public ClickMain clicker;
+    public GameObject obj;
+    public Collectible seedType;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        interaction = GetComponent<InteractMain>();
+        clicker = new ClickMain(obj);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (interaction.allowInteraction)
+        if (clicker.hover())
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
-
-                water.SetActive(true);
-                SetActive(false);
-            }
+                farmSeed.SetActive(true);
+                collectible.GetComponent<FarmSeedPicker>().collectible = this.seedType;
+            }   
         }
     }
 

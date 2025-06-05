@@ -4,7 +4,8 @@ public class FarmWater : MonoBehaviour
 {
 
     public GameObject collectible;
-    public InteractMain interaction;
+    public GameObject obj;
+    private InteractMain interaction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +15,7 @@ public class FarmWater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interaction.allowInteraction)
+        if (interaction.allowInteraction())
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

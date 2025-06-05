@@ -28,12 +28,12 @@ public class InteractMain : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("MainCharacter")) colliding = true;
+        if (col.gameObject == colObj) colliding = true;
     }
 
     void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("MainCharacter")) colliding = false;
+        if (col.gameObject == colObj) colliding = false;
     }
     
 }

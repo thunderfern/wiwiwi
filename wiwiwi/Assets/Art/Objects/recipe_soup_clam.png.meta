@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      recipe_soup_clam_0: 4738149926823289181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

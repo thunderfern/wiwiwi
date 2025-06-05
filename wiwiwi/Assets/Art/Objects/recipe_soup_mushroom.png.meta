@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      recipe_soup_mushroom_0: 8092437407810086081
+      recipe_soup_mushroom_1: -8385458315206270001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

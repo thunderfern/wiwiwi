@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      recipe_soup_carrot_0: -47094886146253420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
