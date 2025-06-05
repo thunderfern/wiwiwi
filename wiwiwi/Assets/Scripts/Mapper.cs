@@ -53,6 +53,18 @@ public enum Collectible
     Cod
 }
 
+public enum AudioType
+{
+    Knock,
+    FootSteps
+}
+
+public enum BackgroundMusic
+{
+    HappyOne
+}
+
+
 public class Mapper
 {
     // Maps

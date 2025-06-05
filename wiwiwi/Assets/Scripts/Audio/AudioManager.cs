@@ -2,33 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Sound
+public class AudioManager : MonoBehaviour
 {
 
-}
+    // Singleton
 
+    private static AudioManager _instance;
 
-
-public class AudioManager : MonoBehaviour {
-
-    private static AudioManager instance;
-    public AudioClip[] soundList;
-    //public List<Sound> soundQueue;
-
-
-    private void Awake()
+    private AudioManager()
     {
-        instance = this;
+        _instance = this;
+
     }
-    // Start is called before the first frame update
+
+    public static AudioManager instance()
+    {
+        if (_instance == null)
+        {
+            AudioManager instance = new AudioManager();
+            _instance = instance;
+        }
+        return _instance;
+    }
+
+    public AudioClip[] audioList;
+    public AudioClip[] backgroundList;
+    public List<float> backgroundLength;
+    public List<float> backgroundCurrent;
+    private AudioSource musicSource;
+    private AudioSource SFXSource;
+
     void Start()
     {
-
+        musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+        SFXSource = transform.GetChild(1).GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+    public void PlaySound(AudioType audio, float volume = 1)
+    {
+        //if (!audioList[(int)audio].isPlaying) audioSource.PlayOneShot(audioList[(int)audio], volume);
+    }
+    
+    public void PlayBackground(BackgroundMusic audio, float volume = 1)
+    {
+        if (!musicSource.isPlaying)
+        {
+            musicSource.clip = backgroundList[(int)audio];
+            musicSource.Play();
+        }
     }
 }
