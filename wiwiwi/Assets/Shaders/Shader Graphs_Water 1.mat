@@ -71,9 +71,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _BodyTransparency: 0
-    - _DistortionOffsetSpeed: 1
+    - _DistortionOffsetSpeed: 3.78
     - _DistortionScale: 30
-    - _DistortionStrength: 0.0025
+    - _DistortionStrength: 0.0298
     m_Colors:
     - _DistortionDir: {r: 0.05, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
