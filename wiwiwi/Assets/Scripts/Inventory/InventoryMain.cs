@@ -25,7 +25,7 @@ public class InventoryMain : MonoBehaviour
 
         for (int i = 0; i < 8; i++)
         {
-            GameObject tmp = Instantiate(sampleEntry);
+            GameObject tmp = Instantiate(sampleEntry, obj.transform);
             tmp.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[i];
             tmp.transform.position = new Vector3(sampleEntry.transform.position.x + 1.3f * (i % 3), sampleEntry.transform.position.y - 1.3f * (i / 3), sampleEntry.transform.position.z);
             entries.Add(tmp);

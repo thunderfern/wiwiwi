@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class InteractMain {
+public class InteractMain : MonoBehaviour
+{
 
     public LayerMask mainCharacterLayer;
     public GameObject obj;
+    public GameObject colObj;
     public bool interactable;
+    private bool colliding;
 
     public InteractMain(GameObject obj, LayerMask layermask)
     {
@@ -15,7 +18,22 @@ public class InteractMain {
     public bool allowInteraction()
     {
         if (!interactable) return false;
-        if (Physics2D.Raycast(obj.transform.position, Vector2.left, 2f, mainCharacterLayer)) return true;
+        if (Physics2D.Raycast(obj.transform.position, Vector2.left, 2f, mainCharacterLayer) || Physics2D.Raycast(obj.transform.position, -Vector2.left, 2f, mainCharacterLayer) || colliding)
+        {
+            Debug.Log("Mmmmmmhm");
+            return true;
+        }
         return false;
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("MainCharacter")) colliding = true;
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("MainCharacter")) colliding = false;
+    }
+    
 }

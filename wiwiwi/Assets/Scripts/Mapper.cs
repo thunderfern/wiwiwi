@@ -43,14 +43,20 @@ public enum Emotion
 
 public enum Collectible
 {
+    Basil,
+    Carrot,
+    Clam,
+    Cod,
     Mushroom,
     Onion,
-    Tomato,
-    Carrot,
     Potato,
-    Basil,
-    Clam,
-    Cod
+    Tomato,
+    CarrotSoup,
+    ClamChowder,
+    FishSoup,
+    MushroomSoup,
+    TomatoSoup,
+    UnknownSoup
 }
 
 public enum AudioType
@@ -74,6 +80,7 @@ public class Mapper
     public Dictionary<string, Collectible> objectMap;
     public Dictionary<string, GoalType> goalTypeMap;
     public Dictionary<string, Emotion> emotionMap;
+    public Dictionary<Collectible, string> collectibleMap2;
 
     // Singleton
 
@@ -105,6 +112,24 @@ public class Mapper
             { "shocked", Emotion.Shocked },
             { "thinking", Emotion.Thinking },
             { "null", Emotion.Null }
+        };
+
+        collectibleMap2 = new Dictionary<Collectible, string>()
+        {
+            { Collectible.Basil , "Basil" },
+            { Collectible.Carrot , "Carrot" },
+            { Collectible.Clam , "Clam" },
+            { Collectible.Cod , "Cod" },
+            { Collectible.Mushroom , "Mushroom" },
+            { Collectible.Onion , "Onion" },
+            { Collectible.Potato , "Potato" },
+            { Collectible.Tomato , "Tomato" },
+            { Collectible.CarrotSoup , "Carrot Soup" },
+            { Collectible.ClamChowder , "Clam Chowder" },
+            { Collectible.FishSoup , "Fish Soup" },
+            { Collectible.MushroomSoup , "Mushroom Soup" },
+            { Collectible.TomatoSoup , "Tomato Soup" },
+            { Collectible.UnknownSoup , "Unknown Soup" }
         };
     }
 

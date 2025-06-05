@@ -6,12 +6,10 @@ public class CharacterMain : MonoBehaviour {
     private InteractMain interaction;
     public GameObject obj;
     public Character character;
-    public LayerMask layerMask;
-    public string displayName;
 
     void Start()
     {
-        interaction = new InteractMain(obj, layerMask);
+        interaction = GetComponent<InteractMain>();
     }
 
     // Update is called once per frame

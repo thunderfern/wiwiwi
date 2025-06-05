@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - MainCharacter
   layers:
   - Default
   - TransparentFX
@@ -44,14 +45,20 @@ TagManager:
   - name: Sorting Texture
     uniqueID: 4214528183
     locked: 0
-  - name: Dialogue
+  - name: Background
     uniqueID: 3942493237
     locked: 0
-  - name: Recipe
+  - name: Midground
     uniqueID: 3420428445
     locked: 0
-  - name: New Layer 3
+  - name: Foreground
     uniqueID: 1328355831
+    locked: 0
+  - name: Dialogue
+    uniqueID: 607655925
+    locked: 0
+  - name: Overlay
+    uniqueID: 958599351
     locked: 0
   m_RenderingLayers:
   - Default
