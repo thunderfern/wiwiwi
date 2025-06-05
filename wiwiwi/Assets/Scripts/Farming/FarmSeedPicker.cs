@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FarmSeedPicker : MonoBehaviour
 {
-    public GameObject collectible;
+    public GameObject collectObj;
     public GameObject farmSeed;
     public ClickMain clicker;
     public GameObject obj;
@@ -21,7 +21,7 @@ public class FarmSeedPicker : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 farmSeed.SetActive(true);
-                collectible.GetComponent<FarmSeedPicker>().collectible = this.seedType;
+                collectObj.GetComponent<FarmSeedPicker>().collectible = this.seedType;
             }   
         }
     }
