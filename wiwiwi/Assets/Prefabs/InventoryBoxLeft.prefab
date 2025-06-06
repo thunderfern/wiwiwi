@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.38, y: -3.09, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1666999604040140511
@@ -103,23 +103,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IngredientImageList:
-  - {fileID: -2122547930254734831, guid: 52ce51aae9b7c46048b7abf6f5e9a426, type: 3}
-  - {fileID: 1797942898945283502, guid: 502ee7be67cb64162ae8003ef5abb376, type: 3}
-  - {fileID: 7511773089898659029, guid: 17b52e772fc4b4c7da0b3dd5a9d1aed2, type: 3}
-  - {fileID: -5582568345668428430, guid: f186e23c240fe4139a60ef135b11ae15, type: 3}
-  - {fileID: -6191186367179630228, guid: 53cf3b9fb6c974221a3c9bc44d1308bd, type: 3}
-  - {fileID: 7964813234509461895, guid: 9a92120b1cc3d46f499428f0209dc106, type: 3}
-  - {fileID: -9018402615143553595, guid: 0b1d05698bf57451086b7e010e54522d, type: 3}
-  - {fileID: -9018402615143553595, guid: 0b1d05698bf57451086b7e010e54522d, type: 3}
-  - {fileID: -1657226120525456300, guid: cb15fe1582c3345b285a823cfe4c65b1, type: 3}
+  - {fileID: 4586605256563224004, guid: c21ab17d37ab52546959e6ec75f3b84e, type: 3}
+  - {fileID: -1756020456905359547, guid: b028f9f93ba7798409bf834254c2222e, type: 3}
+  - {fileID: -7545806177157672931, guid: 1b77b9ed28403814e81d2e5eee481bfc, type: 3}
+  - {fileID: -327519969235453616, guid: 20637e59104ca5e4f835cbe4d6fa8e7b, type: 3}
+  - {fileID: 4022565769671487056, guid: ddc73896657fa0c43ac53a79d5ae87cd, type: 3}
+  - {fileID: -8454411075216801674, guid: 658e6d7f8ee7fad41a7c740ba616dcae, type: 3}
+  - {fileID: 4292551175078508406, guid: 827597a9f12f01048b43f98f2f622048, type: 3}
+  - {fileID: 9072476735100530759, guid: 42ad5dab42fdd0c459f42814df03e4df, type: 3}
+  - {fileID: 0}
   IngredientNames:
   - Carrot
   - Cod
   - Mushroom
   - Onion
-  - Seabass
-  - Seaweed
-  - Swordfish
+  - Clam
+  - Potato
+  - Tomato
+  - Basil
+  - 
   pot: {fileID: 0}
   slotNumber: 0
 --- !u!61 &1589187386309828359
@@ -160,7 +162,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

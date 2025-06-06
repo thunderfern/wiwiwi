@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WaterTrigger : MonoBehaviour
+/*public class WaterTrigger : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private LayerMask _waterMask;
@@ -50,4 +50,4 @@ public class WaterTrigger : MonoBehaviour
         
     }
 
-}
+}*/
