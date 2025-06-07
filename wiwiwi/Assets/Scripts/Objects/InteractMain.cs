@@ -54,14 +54,23 @@ public class InteractMain : MonoBehaviour
             }
             else return true;
         }
-        /*if (colliding)
+        if (colliding)
+        {
+            if (objlayermask == LayerMask.NameToLayer("InteractableE"))
             {
-                return true;
-        }*/
+                if (colObj.GetComponent<PlayerMain>().interactableE == obj) return true;
+            }
+            
+            if (objlayermask == LayerMask.NameToLayer("InteractableB"))
+            {
+                if (colObj.GetComponent<PlayerMain>().interactableB == obj) return true;
+            }
+            return true;
+        }
         return false;
     }
 
-    /*void OnTriggerEnter2D(Collider2D col) {
+    void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject == colObj) {
             colliding = true;
         }
@@ -71,6 +80,6 @@ public class InteractMain : MonoBehaviour
         if (col.gameObject == colObj) {
             colliding = false;
         }
-    }*/
+    }
     
 }

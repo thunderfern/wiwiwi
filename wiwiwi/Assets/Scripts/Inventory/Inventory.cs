@@ -11,7 +11,7 @@ public class Inventory
     {
         _instance = this;
         ingredients = new List<int>();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 15; i++)
         {
             ingredients.Add(0);
         }
@@ -43,6 +43,7 @@ public class Inventory
     public void addIngredient(Collectible collectible)
     {
         if (ingredients[(int)collectible] < 99) ingredients[(int)collectible]++;
+        Debug.Log(World.instance().goal.goalType + " " + World.instance().goal.collectible);
         if (World.instance().goal.goalType == GoalType.Collect && World.instance().goal.collectible == collectible) World.instance().goal.goalComplete();
     }
 

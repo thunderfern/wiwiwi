@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class Pot : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class Pot : MonoBehaviour
     public string ingredientName = "";
     public bool click;
 
-    public string[] soupNames = new string[]{"Tomato Soup", "Mushroom Soup", "Fish Soup", "Carrot Soup", "Clam Chowder", "Nothing", "Suspicious Looking Soup"};
+    public string[] soupNames = new string[]{"TomatoSoup", "MushroomSoup", "FishSoup", "CarrotSoup", "ClamChowder", "Nothing", "UnknownSoup"};
     public Sprite[] soupImageList;
 
     public string soup;
+
+    private Collider2D curCollider;
 
     void Start()
     {
@@ -22,9 +25,19 @@ public class Pot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (curCollider != null)
+            {
+                ingredientName = curCollider.GetComponent<Drag>().IngredientName();
+                Debug.Log(ingredientName);
+                tryAdd(ingredientName);
+                Destroy(curCollider.gameObject);
+                curCollider = null;
+            }
+        }
         updateInventoryBoxes();
         soupDisplay();
-
     }
 
     private void Add()
@@ -32,35 +45,41 @@ public class Pot : MonoBehaviour
 
     }
 
-
-    private void OnTriggerStay2D(Collider2D other)
+    public void resetPot()
     {
-        if (other.gameObject.name != null)
+        for (int i = 0; i < ingredients.Length; i++)
         {
-            ingredientName = other.GetComponent<Drag>().IngredientName();
-            Debug.Log(ingredientName);
-            if (Input.GetMouseButtonDown(0))
-            {
-                tryAdd(ingredientName);
-                Destroy(other.gameObject);
+            ingredients[i] = "";
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<Drag>())
+        {
+            curCollider = other;
+        }
+    }
 
-
-
-            }
-
-
+    private void OnTriggerExit2D(Collider2D other) {
+        if (curCollider == other)
+        {
+            curCollider = null;
         }
     }
 
     void tryAdd(string ingredient)
     {
+        
         for (int i = 0; i < ingredients.Length; i++)
         {
             if (ingredients[i] == "")
             {
-                ingredients[i] = ingredient;
-                Debug.Log(ingredients[0] + ingredients[1] + ingredients[2]);
+                if (Inventory.instance().getIngredient((Collectible)Enum.Parse(typeof(Collectible), ingredient)))
+                {
+                    ingredients[i] = ingredient;
+                    Debug.Log(ingredients[0] + ingredients[1] + ingredients[2]);
+                }
                 break;
             }
         }
@@ -151,37 +170,33 @@ public class Pot : MonoBehaviour
 
         if (tomatoCount == 1 && onionCount == 1 && basilCount == 1)
         {
-            return "Tomato Soup";
+            return "TomatoSoup";
         }
         else if (mushroomCount == 1 && onionCount == 1 && tomatoCount == 0 && basilCount == 0 && codCount == 0 && carrotCount == 0 && potatoCount == 0 & clamCount == 0)
         {
-            return "Mushroom Soup";
+            return "MushroomSoup";
         }
         else if (codCount == 1 && tomatoCount == 1 && basilCount == 1)
         {
-            return "Fish Soup";
+            return "FishSoup";
 
         }
         else if (carrotCount == 1 && tomatoCount == 1 && onionCount == 1)
         {
-            return "Carrot Soup";
+            return "CarrotSoup";
         }
         else if (potatoCount == 1 && clamCount == 1 && basilCount == 1)
         {
-            return "Clam Chowder";
+            return "ClamChowder";
         }
         else if (hasIngredients)
         {
-            return "Suspicious Looking Soup";
+            return "UnknownSoup";
         }
         else
         {
             return "Nothing";
         }
-
-
-
-
     }
     public void soupDisplay()
     {
@@ -191,7 +206,6 @@ public class Pot : MonoBehaviour
             if (soupNames[i] == soupName)
             {
                 GetComponent<SpriteRenderer>().sprite = soupImageList[i];
-                Debug.Log(soupName);
                 break;
             }
         }

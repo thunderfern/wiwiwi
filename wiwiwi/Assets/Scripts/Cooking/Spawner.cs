@@ -4,6 +4,7 @@ public class Spawner : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private GameObject vegetable;
+    public GameObject cookMain;
     void Start()
     {
 
@@ -16,7 +17,10 @@ public class Spawner : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        GameObject g = GameObject.Instantiate(vegetable);
+        if (cookMain.GetComponent<CookingMain>().cooking)
+        {
+            GameObject g = GameObject.Instantiate(vegetable);
+        }
     }
     
 }

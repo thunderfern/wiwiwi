@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 1d7b75a8315789943971290dbf8e499e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2239375305535337510
+    second: bg_pond_anim2_0
+  - first:
+      213: 4704704007185158302
+    second: bg_pond_anim2_1
+  - first:
+      213: 4240311467883939423
+    second: bg_pond_anim2_2
+  - first:
+      213: 1012398671397105048
+    second: bg_pond_anim2_3
+  - first:
+      213: -6627297070168301917
+    second: bg_pond_anim2_4
+  - first:
+      213: 8187522774799990594
+    second: bg_pond_anim2_5
+  - first:
+      213: 1660385193349071823
+    second: bg_pond_anim2_6
+  - first:
+      213: 5175869556592502289
+    second: bg_pond_anim2_7
+  - first:
+      213: -7699704753902482788
+    second: bg_pond_anim2_8
+  - first:
+      213: -6209179431406197402
+    second: bg_pond_anim2_9
+  - first:
+      213: -2927761688206977423
+    second: bg_pond_anim2_10
+  - first:
+      213: -8461360326372388846
+    second: bg_pond_anim2_11
+  - first:
+      213: 2383989991875078438
+    second: bg_pond_anim2_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_pond_anim2_0
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 673
+        width: 210
+        height: 860
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6243735c9fbd31f10800000000000000
+      internalID: 2239375305535337510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1524
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90d0a13e577a4140800000000000000
+      internalID: 4704704007185158302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_2
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 54
+        width: 169
+        height: 1575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56cc3c50dc98da30800000000000000
+      internalID: 4240311467883939423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_3
+      rect:
+        serializedVersion: 2
+        x: 3604
+        y: 0
+        width: 535
+        height: 1644
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89da3bb4a33cc0e00800000000000000
+      internalID: 1012398671397105048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 188
+        height: 813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae91a77d6c1704a0800000000000000
+      internalID: -6627297070168301917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_5
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 371
+        width: 247
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24fbf56959cef9170800000000000000
+      internalID: 8187522774799990594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_6
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 513
+        width: 101
+        height: 728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3c3e7498fda0710800000000000000
+      internalID: 1660385193349071823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_7
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 383
+        width: 368
+        height: 904
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116647450f164d740800000000000000
+      internalID: 5175869556592502289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_8
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 152
+        width: 132
+        height: 1128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a81443257252590800000000000000
+      internalID: -7699704753902482788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_9
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 99
+        width: 396
+        height: 1174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6652f5c643094d9a0800000000000000
+      internalID: -6209179431406197402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_10
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 655
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176dc6ba1408e57d0800000000000000
+      internalID: -2927761688206977423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_11
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 139
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2109df50d95339a80800000000000000
+      internalID: -8461360326372388846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_pond_anim2_12
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 12
+        width: 7
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629ecc54442a51120800000000000000
+      internalID: 2383989991875078438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_pond_anim2_0: 2239375305535337510
+      bg_pond_anim2_1: 4704704007185158302
+      bg_pond_anim2_10: -2927761688206977423
+      bg_pond_anim2_11: -8461360326372388846
+      bg_pond_anim2_12: 2383989991875078438
+      bg_pond_anim2_2: 4240311467883939423
+      bg_pond_anim2_3: 1012398671397105048
+      bg_pond_anim2_4: -6627297070168301917
+      bg_pond_anim2_5: 8187522774799990594
+      bg_pond_anim2_6: 1660385193349071823
+      bg_pond_anim2_7: 5175869556592502289
+      bg_pond_anim2_8: -7699704753902482788
+      bg_pond_anim2_9: -6209179431406197402
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -22,10 +22,8 @@ public class FarmSeed : MonoBehaviour
 
         if (!Input.GetMouseButton(0))
         {
-            Debug.Log("ok\n");
             if (interaction.allowInteraction())
             {
-                Debug.Log("mhm\n");
                 farmWater.SetActive(true);
             }
             obj.SetActive(false);

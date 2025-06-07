@@ -30,21 +30,55 @@ public class AudioManager : MonoBehaviour
     public List<float> backgroundLength;
     public List<float> backgroundCurrent;
     private AudioSource musicSource;
-    private AudioSource SFXSource;
+    private List<AudioSource> SFXSources;
 
     void Start()
     {
+        SFXSources = new List<AudioSource>();
         musicSource = transform.GetChild(0).GetComponent<AudioSource>();
-        SFXSource = transform.GetChild(1).GetComponent<AudioSource>();
+        SFXSources.Add(transform.GetChild(1).GetComponent<AudioSource>());
+        SFXSources.Add(transform.GetChild(2).GetComponent<AudioSource>());
+        SFXSources.Add(transform.GetChild(3).GetComponent<AudioSource>());
+        SFXSources.Add(transform.GetChild(4).GetComponent<AudioSource>());
     }
 
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) PlaySound(AudioType.Click);
+    }
+
+
+    bool checkPlaying(AudioType audio)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (!SFXSources[i].isPlaying) continue;
+            if (SFXSources[i].clip == audioList[(int)audio]) return true;
+        }
+        return false;
+    }
+
+    void playFirst(AudioType audio) {
+        for (int i = 0; i < 4; i++)
+        {
+            if (!SFXSources[i].isPlaying)
+            {
+                SFXSources[i].clip = audioList[(int)audio];
+                SFXSources[i].Play();
+                return;
+            }
+        }
+    }
 
     public void PlaySound(AudioType audio, float volume = 1)
     {
-        //if (!audioList[(int)audio].isPlaying) audioSource.PlayOneShot(audioList[(int)audio], volume);
+        if (!checkPlaying(audio))
+        {
+            playFirst(audio);
+        }
     }
     
-    public void PlayBackground(BackgroundMusic audio, float volume = 1)
+    public void PlayBackground(BackgroundMusic audio, float volume = 0.5f)
     {
         if (!musicSource.isPlaying)
         {

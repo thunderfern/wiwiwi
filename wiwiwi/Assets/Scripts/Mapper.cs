@@ -85,8 +85,19 @@ public enum Location
 
 public enum AudioType
 {
-    Knock,
-    FootSteps
+    Footsteps,
+    Click,
+    Rain,
+    Jumping,
+    Splash,
+    Pond,
+    OpenDoor,
+    PageFlip,
+    Kick,
+    LandingOnGrass,
+    LandingOnDirt,
+    Cooking,
+    WateringPlants
 }
 
 public enum BackgroundMusic

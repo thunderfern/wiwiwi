@@ -22,7 +22,7 @@ public class PopupIcon : MonoBehaviour
                 if (World.instance().curstate != GameState.Recipe && World.instance().curstate != GameState.Inventory)
                 {
 
-                    World.instance().prevstate.Add(World.instance().curstate);
+                    World.instance().prevstate.Insert(0, World.instance().curstate);
                 }
                 World.instance().curstate = targetGameState;
                 popupObj.SetActive(true);

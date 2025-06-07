@@ -29,7 +29,7 @@ public class StoryManager : MonoBehaviour {
         TextAsset parseFile = storyFiles[(int)storyPart];
 
         World world = World.instance();
-        world.prevstate.Add(world.curstate);
+        world.prevstate.Insert(0, world.curstate);
         world.curstate = GameState.Dialogue;
 
         (List<DialogueScreen>, Goal) parseResult = JSONParser.parseStory(storyFiles[(int)storyPart]);
@@ -37,7 +37,5 @@ public class StoryManager : MonoBehaviour {
         World.instance().goal = parseResult.Item2;
         Debug.Log(World.instance().goal.character);
         Debug.Log(World.instance().goal.goalType);
-        
-
     }
 }

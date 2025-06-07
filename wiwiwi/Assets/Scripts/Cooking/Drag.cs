@@ -18,24 +18,24 @@ public class Drag : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (holding)
-        {
-            pos = cam.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = pos;
-        }
+        //if (holding)
+        //{
+        pos = cam.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = pos;
+        //}
     }
-    void OnMouseDown()
+    /*void OnMouseDown()
     {
         if (holding)
         {
             holding = false;
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
         else
         {
             holding = true;
         }
-    }
+    }*/
     
     public string IngredientName()
     {
