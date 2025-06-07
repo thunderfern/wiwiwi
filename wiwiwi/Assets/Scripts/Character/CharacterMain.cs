@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class CharacterMain : MonoBehaviour {
+public class CharacterMain : MonoBehaviour
+{
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private InteractMain interaction;
@@ -22,5 +23,7 @@ public class CharacterMain : MonoBehaviour {
                 if (World.instance().goal.character == this.character && World.instance().goal.goalType == GoalType.Interact) World.instance().goal.goalComplete();
             }
         }
+
     }
+
 }

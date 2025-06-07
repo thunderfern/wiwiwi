@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+happy
+null
+get bro some veggies
+
+GOAL
+go
+garden
+Tutorial05

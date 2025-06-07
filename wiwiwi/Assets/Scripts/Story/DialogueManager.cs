@@ -82,7 +82,8 @@ public class DialogueManager : MonoBehaviour {
     public void displayNext() {
         dialogueStream.RemoveAt(0);
         if (dialogueStream.Count == 0) {
-            World.instance().curstate = World.instance().prevstate;
+            World.instance().curstate = World.instance().prevstate[0];
+            World.instance().prevstate.RemoveAt(0);
             dialogueObject.SetActive(false);
             return;
         }

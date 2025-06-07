@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class World : MonoBehaviour {
     
@@ -21,20 +22,24 @@ public class World : MonoBehaviour {
     }
 
     public GameState curstate;
-    public GameState prevstate;
+    public List<GameState> prevstate;
     public Goal goal;
     public StoryManager storyManager;
     public DialogueManager dialogueManager;
 
-    void Start() {
+    void Start()
+    {
         this.curstate = GameState.Platformer;
+        this.prevstate = new List<GameState>();
         this.goal = new Goal();
         this.storyManager = StoryManager.instance();
         this.dialogueManager = DialogueManager.instance();
         this.storyManager.read(StoryPart.Tutorial01);
+        
     }
 
-    public void changeGoal() {
+    public void changeGoal()
+    {
         this.curstate = GameState.Dialogue;
         //storyManager.read(currentGoal.nextAction);
     }

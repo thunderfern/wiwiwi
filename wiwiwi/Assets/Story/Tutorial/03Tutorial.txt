@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+happy
+null
+What soup do you want bro
+
+GOAL
+open
+recipe
+Tutorial04

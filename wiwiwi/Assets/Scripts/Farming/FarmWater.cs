@@ -10,6 +10,7 @@ public class FarmWater : MonoBehaviour
     void Start()
     {
         interaction = GetComponent<InteractMain>();
+        obj.SetActive(false);
     }
 
     // Update is called once per frame

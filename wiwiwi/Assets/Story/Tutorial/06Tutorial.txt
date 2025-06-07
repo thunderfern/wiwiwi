@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+happy
+null
+lets make soup
+
+GOAL
+go
+kitchen
+Tutorial07

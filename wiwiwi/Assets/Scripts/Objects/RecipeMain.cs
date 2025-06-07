@@ -60,7 +60,10 @@ public class RecipeMain : MonoBehaviour
         {
             if (closeObjClick.hover())
             {
-                World.instance().curstate = World.instance().prevstate;
+                World.instance().curstate = World.instance().prevstate[0];
+                World.instance().prevstate.RemoveAt(0);
+                if (World.instance().goal.goalType == GoalType.Open && World.instance().goal.icon == Icon.Recipe) World.instance().goal.goalComplete();
+                Debug.Log(World.instance().curstate);
             }
             else if (prevArrowClick.hover())
             {

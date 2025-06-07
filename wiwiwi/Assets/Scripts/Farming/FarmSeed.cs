@@ -4,7 +4,6 @@ public class FarmSeed : MonoBehaviour
 {
 
     public GameObject collectible;
-    public Collectible seedType;
     public GameObject farmWater;
     public GameObject obj;
     private InteractMain interaction;
@@ -12,6 +11,7 @@ public class FarmSeed : MonoBehaviour
     void Start()
     {
         interaction = GetComponent<InteractMain>();
+        obj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,12 +22,13 @@ public class FarmSeed : MonoBehaviour
 
         if (!Input.GetMouseButton(0))
         {
+            Debug.Log("ok\n");
             if (interaction.allowInteraction())
             {
                 Debug.Log("mhm\n");
                 farmWater.SetActive(true);
-                obj.SetActive(false);
             }
+            obj.SetActive(false);
         }
     }
 }

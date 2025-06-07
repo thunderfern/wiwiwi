@@ -20,14 +20,31 @@ public enum GameState
     Inventory
 }
 
-public enum GoalType {
-    Interact
+public enum GoalType
+{
+    Interact,
+    Go,
+    Collect,
+    Open
 };
 
-public enum StoryPart {
+public enum Icon
+{
+    Recipe,
+    Inventory
+}
+
+public enum StoryPart
+{
     Tutorial01,
     Tutorial02,
-    Tutorial03
+    Tutorial03,
+    Tutorial04,
+    Tutorial05,
+    Tutorial06,
+    Tutorial07,
+    Tutorial08,
+    Tutorial09
 };
 
 public enum Emotion
@@ -59,6 +76,13 @@ public enum Collectible
     UnknownSoup
 }
 
+public enum Location
+{
+    Burrow,
+    Kitchen,
+    Garden
+}
+
 public enum AudioType
 {
     Knock,
@@ -76,8 +100,10 @@ public class Mapper
     // Maps
 
     public Dictionary<string, Character> characterMap;
+    public Dictionary<string, Location> locationMap;
     public Dictionary<string, GameState> gameStateMap;
-    public Dictionary<string, Collectible> objectMap;
+    public Dictionary<string, Collectible> collectibleMap;
+    public Dictionary<string, Icon> iconMap;
     public Dictionary<string, GoalType> goalTypeMap;
     public Dictionary<string, Emotion> emotionMap;
     public Dictionary<Collectible, string> collectibleMap2;
@@ -98,9 +124,25 @@ public class Mapper
             { "Unknown", Character.Unknown },
         };
 
+        locationMap = new Dictionary<string, Location>()
+        {
+            { "burrow", Location.Burrow },
+            { "kitchen", Location.Kitchen },
+            { "garden", Location.Garden }
+        };
+
+        iconMap = new Dictionary<string, Icon>()
+        {
+            { "recipe", Icon.Recipe },
+            { "inventory", Icon.Inventory }
+        };
+
         goalTypeMap = new Dictionary<string, GoalType>()
         {
-            { "interact", GoalType.Interact }
+            { "interact", GoalType.Interact },
+            { "go", GoalType.Go },
+            { "collect", GoalType.Collect },
+            { "open", GoalType.Open }
         };
 
         emotionMap = new Dictionary<string, Emotion>()
@@ -112,6 +154,24 @@ public class Mapper
             { "shocked", Emotion.Shocked },
             { "thinking", Emotion.Thinking },
             { "null", Emotion.Null }
+        };
+
+        collectibleMap = new Dictionary<string, Collectible>()
+        {
+            { "Basil", Collectible.Basil },
+            { "Carrot", Collectible.Carrot },
+            { "Clam", Collectible.Clam },
+            { "Cod", Collectible.Cod },
+            { "Mushroom", Collectible.Mushroom },
+            { "Onion", Collectible.Onion },
+            { "Potato", Collectible.Potato },
+            { "Tomato", Collectible.Tomato },
+            { "CarrotSoup", Collectible.CarrotSoup },
+            { "ClamChowder", Collectible.ClamChowder },
+            { "FishSoup", Collectible.FishSoup },
+            { "MushroomSoup", Collectible.MushroomSoup },
+            { "TomatoSoup", Collectible.TomatoSoup },
+            { "UnknownSoup", Collectible.UnknownSoup },
         };
 
         collectibleMap2 = new Dictionary<Collectible, string>()

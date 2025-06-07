@@ -4,6 +4,7 @@ public class Parallax : MonoBehaviour
 {
     private Vector3 cameraOrig;
     private Vector3 objOrig;
+    public float scaleAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,6 +15,6 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(objOrig.x + (Camera.main.transform.position.x - cameraOrig.x) * 0.25f, objOrig.y + (Camera.main.transform.position.y - cameraOrig.y) * 0.25f, objOrig.z);
+        transform.position = new Vector3(objOrig.x + (Camera.main.transform.position.x - cameraOrig.x) * scaleAmount, objOrig.y + (Camera.main.transform.position.y - cameraOrig.y) * scaleAmount, objOrig.z);
     }
 }

@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+happy
+null
+lets grow veggies
+
+GOAL
+collect
+Tomato
+Tutorial06

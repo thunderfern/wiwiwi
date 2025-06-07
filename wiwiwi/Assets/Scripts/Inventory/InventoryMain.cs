@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class InventoryMain : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class InventoryMain : MonoBehaviour
         {
             GameObject tmp = Instantiate(sampleEntry, obj.transform);
             tmp.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[i];
+            tmp.transform.GetChild(3).GetChild(0).gameObject.GetComponent<TMP_Text>().text = Convert.ToString(Inventory.instance().getNumIngredient((Collectible)(i)));
             tmp.transform.position = new Vector3(sampleEntry.transform.position.x + 1.3f * (i % 3), sampleEntry.transform.position.y - 1.3f * (i / 3), sampleEntry.transform.position.z);
             entries.Add(tmp);
         }
@@ -44,16 +46,19 @@ public class InventoryMain : MonoBehaviour
         {
             obj.SetActive(false);
         }
+        for (int i = 0; i < 8; i++)
+        {
+            entries[i].transform.GetChild(3).GetChild(0).gameObject.GetComponent<TMP_Text>().text = Convert.ToString(Inventory.instance().getNumIngredient((Collectible)(i)));
+        }
         if (closeObjClick.hover())
         {
             if (Input.GetMouseButtonDown(0))
             {
-                World.instance().curstate = World.instance().prevstate;
+                World.instance().curstate = World.instance().prevstate[0];
+                World.instance().prevstate.RemoveAt(0);
             }
         }
         getItem();
-
-
     }
 
     public Tuple<Collectible, GameObject> getItem()

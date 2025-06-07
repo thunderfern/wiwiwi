@@ -1,0 +1,15 @@
+DIALOGUE
+
+Player
+happy
+null
+Why hello there Mr. Mole, it's quite rare to see a new face around here, how can I help you today?
+
+GOAL
+interact
+Mr. Mole
+Tutorial03
+
+SETUP
+Mr. Mole sit
+

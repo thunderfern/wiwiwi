@@ -16,8 +16,8 @@ TagManager:
   - MainCharacter
   - Dialogue
   - Recipe
-  - 
-  - 
+  - InteractableE
+  - InteractableB
   - 
   - 
   - 
@@ -48,8 +48,29 @@ TagManager:
   - name: Background
     uniqueID: 3942493237
     locked: 0
+  - name: Parallax1
+    uniqueID: 1939566075
+    locked: 0
+  - name: Parallax2
+    uniqueID: 884339297
+    locked: 0
   - name: Midground
     uniqueID: 3420428445
+    locked: 0
+  - name: InteractableE
+    uniqueID: 3759180015
+    locked: 0
+  - name: InteractableB
+    uniqueID: 2291822995
+    locked: 0
+  - name: Player
+    uniqueID: 2181719057
+    locked: 0
+  - name: Animations
+    uniqueID: 2103158325
+    locked: 0
+  - name: Platform
+    uniqueID: 3964635623
     locked: 0
   - name: Foreground
     uniqueID: 1328355831

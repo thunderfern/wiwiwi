@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class StoryManager : MonoBehaviour {
 
     // Singleton
@@ -27,14 +25,19 @@ public class StoryManager : MonoBehaviour {
 
     public void read(StoryPart storyPart)
     {
-
+        Debug.Log(storyPart);
         TextAsset parseFile = storyFiles[(int)storyPart];
 
         World world = World.instance();
-        world.prevstate = world.curstate;
+        world.prevstate.Add(world.curstate);
         world.curstate = GameState.Dialogue;
 
-        DialogueManager.instance().updateDialogue(JSONParser.parseStory(storyFiles[(int)storyPart]).Item1);
+        (List<DialogueScreen>, Goal) parseResult = JSONParser.parseStory(storyFiles[(int)storyPart]);
+        DialogueManager.instance().updateDialogue(parseResult.Item1);
+        World.instance().goal = parseResult.Item2;
+        Debug.Log(World.instance().goal.character);
+        Debug.Log(World.instance().goal.goalType);
+        
 
     }
 }

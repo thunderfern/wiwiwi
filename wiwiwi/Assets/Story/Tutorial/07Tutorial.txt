@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+happy
+null
+add the ingredients
+
+GOAL
+collect
+TomatoSoup
+Tutorial08

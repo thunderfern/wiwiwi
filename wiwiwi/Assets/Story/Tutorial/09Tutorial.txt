@@ -1,0 +1,6 @@
+DIALOGUE
+
+Player
+happy
+null
+amazin soup

@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+happy
+null
+lets give to mrmole
+
+GOAL
+interact
+Mr. Mole
+Tutorial09

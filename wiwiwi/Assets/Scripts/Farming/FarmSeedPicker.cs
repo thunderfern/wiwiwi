@@ -21,7 +21,7 @@ public class FarmSeedPicker : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 farmSeed.SetActive(true);
-                collectObj.GetComponent<FarmSeedPicker>().collectible = this.seedType;
+                collectObj.GetComponent<FarmCollect>().collectible = this.seedType;
             }   
         }
     }

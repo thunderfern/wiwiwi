@@ -27,5 +27,8 @@ Who could it be?
 
 GOAL
 interact
-mrmole
-02Tutorial
+Mr. Mole
+Tutorial02
+
+SETUP
+Mr. Mole burrow

@@ -43,6 +43,7 @@ public class Inventory
     public void addIngredient(Collectible collectible)
     {
         if (ingredients[(int)collectible] < 99) ingredients[(int)collectible]++;
+        if (World.instance().goal.goalType == GoalType.Collect && World.instance().goal.collectible == collectible) World.instance().goal.goalComplete();
     }
 
     public int getNumIngredient(Collectible collectible)

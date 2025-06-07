@@ -13,14 +13,18 @@ public class FarmSlotMain : MonoBehaviour
     void Update()
     {
         int inactiveMembers = 0;
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 1; i < transform.childCount; i++)
         {
             if (!transform.GetChild(i).gameObject.activeInHierarchy) inactiveMembers++;
             else
             {
-                for (int j = 0; j < i; j++) transform.GetChild(j).gameObject.SetActive(false);
+                for (int j = 1; j < i; j++)
+                {
+                    transform.GetChild(j).gameObject.SetActive(false);
+                }
+                if (i != 1) transform.GetChild(0).GetComponent<InteractMain>().interactable = false;
             }
         }
-        if (inactiveMembers == 3) transform.GetChild(0).gameObject.SetActive(true);
+        if (inactiveMembers == 3) transform.GetChild(0).GetComponent<InteractMain>().interactable = true;
     }
 }
