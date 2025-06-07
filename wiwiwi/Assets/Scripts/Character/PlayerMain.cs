@@ -26,7 +26,7 @@ public class PlayerMain : MonoBehaviour {
 
     void Update()
     {
-        AudioManager.instance().PlayBackground(BackgroundMusic.HappyOne);
+        
     }
 
     // For physics updates

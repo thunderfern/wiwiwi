@@ -40,6 +40,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a2600785b8574a4b81ac850e21ce2d32_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ddc73896657fa0c43ac53a79d5ae87cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -75,7 +83,7 @@ Material:
     - _ColorMap: -0.52
     - _DistortionOffsetSpeed: 10
     - _DistortionScale: 50
-    - _DistortionStrength: 0.05
+    - _DistortionStrength: 90
     - _Transparency: 0.5
     m_Colors:
     - _BottomColor: {r: 0.24705875, g: 0.5058824, b: 0.42745098, a: 1}

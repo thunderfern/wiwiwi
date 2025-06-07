@@ -23,5 +23,6 @@ public class FarmTransSlot : MonoBehaviour
                 seedMenu.SetActive(!seedMenu.activeInHierarchy);
             }
         }
+        else seedMenu.SetActive(false);
     }
 }

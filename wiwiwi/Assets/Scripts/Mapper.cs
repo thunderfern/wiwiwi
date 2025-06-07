@@ -102,7 +102,10 @@ public enum AudioType
 
 public enum BackgroundMusic
 {
-    HappyOne
+    BurrowBackground,
+    OverworldBackground,
+    RainBackground,
+    ThunderBackground
 }
 
 

@@ -58,7 +58,8 @@ public class AudioManager : MonoBehaviour
         return false;
     }
 
-    void playFirst(AudioType audio) {
+    void playFirst(AudioType audio)
+    {
         for (int i = 0; i < 4; i++)
         {
             if (!SFXSources[i].isPlaying)
@@ -77,13 +78,35 @@ public class AudioManager : MonoBehaviour
             playFirst(audio);
         }
     }
-    
+
     public void PlayBackground(BackgroundMusic audio, float volume = 0.5f)
     {
         if (!musicSource.isPlaying)
         {
+            Debug.Log("hello?\n");
             musicSource.clip = backgroundList[(int)audio];
+
             musicSource.Play();
         }
+        else
+        {
+            if (musicSource.clip != backgroundList[(int)audio])
+            {
+                musicSource.clip = backgroundList[(int)audio];
+                musicSource.Play();
+            }
+        }
+        if (musicSource.isPlaying)
+        {
+            if (musicSource.volume < 1)
+            {
+                musicSource.volume += Mathf.Min(Time.deltaTime / 10f, 1.0f - musicSource.volume);
+            }
+        }
+    }
+
+    public void BackgroundVolume(float volume)
+    {
+        musicSource.volume = volume;
     }
 }
