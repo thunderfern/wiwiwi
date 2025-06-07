@@ -7,6 +7,7 @@ public class FarmSeedPicker : MonoBehaviour
     public ClickMain clicker;
     public GameObject obj;
     public Collectible seedType;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

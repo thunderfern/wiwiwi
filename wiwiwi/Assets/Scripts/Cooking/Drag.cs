@@ -22,17 +22,12 @@ public class Drag : MonoBehaviour
         {
             pos = cam.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos;
-            Debug.Log(this.gameObject.name);
         }
     }
     void OnMouseDown()
     {
         if (holding)
         {
-            if (touchingPot)
-            {
-                Debug.Log(this.gameObject.name);
-            }
             holding = false;
             Destroy(this.gameObject);
         }
@@ -40,15 +35,6 @@ public class Drag : MonoBehaviour
         {
             holding = true;
         }
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.name == "Pot")
-        {
-            touchingPot = true;
-        }
-
     }
     
     public string IngredientName()

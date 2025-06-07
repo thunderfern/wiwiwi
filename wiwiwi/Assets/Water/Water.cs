@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine.UIElements;
-using UnityEditor.UIElements;
-[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(EdgeCollider2D))]
+//using UnityEngine.UIElements;
+//using UnityEditor.UIElements;
+/*[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(EdgeCollider2D))]
 [RequireComponent(typeof(WaterTrigger))]
 
 public class Water : MonoBehaviour
@@ -318,4 +318,4 @@ public class WaterEditor : Editor
     }
 
     
-}
+}*/

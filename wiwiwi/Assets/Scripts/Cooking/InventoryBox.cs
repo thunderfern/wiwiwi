@@ -26,6 +26,7 @@ public class InventoryBox : MonoBehaviour
             if (IngredientNames[i] == ingName)
             {
                 GetComponent<SpriteRenderer>().sprite = IngredientImageList[i];
+                transform.localScale = new Vector3(0.45f, 0.45f, 0.45f);
                 break;
             }
         }
