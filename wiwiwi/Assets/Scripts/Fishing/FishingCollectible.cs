@@ -23,6 +23,7 @@ public class FishingCollectible : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                AudioManager.instance().PlaySound(AudioType.Splash);
                 World.instance().prevstate.Insert(0, World.instance().curstate);
                 World.instance().curstate = GameState.Fishing;
             }
