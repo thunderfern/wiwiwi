@@ -84,7 +84,7 @@ Material:
     - _DistortionOffsetSpeed: 10
     - _DistortionScale: 50
     - _DistortionStrength: 90
-    - _Transparency: 0.5
+    - _Transparency: 0.503
     m_Colors:
     - _BottomColor: {r: 0.24705875, g: 0.5058824, b: 0.42745098, a: 1}
     - _DistortionDir: {r: 5, g: 0, b: 0, a: 0}

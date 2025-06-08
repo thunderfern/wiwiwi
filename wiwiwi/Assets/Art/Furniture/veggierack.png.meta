@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 391aa8bc78aa37c4d92f5762a206acd6
+guid: 91a25512ca0544802b75f86db15793ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6546180761841186820
-    second: bg_forest_plot3_0
+      213: -1908084985899174601
+    second: veggierack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg_forest_plot3_0
+      name: veggierack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 599
-        height: 127
+        width: 574
+        height: 847
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf7c5feb74b4725a0800000000000000
-      internalID: -6546180761841186820
+      spriteID: 735393690de1585e0800000000000000
+      internalID: -1908084985899174601
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      bg_forest_plot3_0: -6546180761841186820
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
