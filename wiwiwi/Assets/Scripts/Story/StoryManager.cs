@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class StoryManager : MonoBehaviour
 {
@@ -48,10 +49,10 @@ public class StoryManager : MonoBehaviour
     {
         if (arg1 == "position")
         {
-            Character curchar = Enum.Parse(typeof(Character), arg2);
+            Character curchar = (Character)Enum.Parse(typeof(Character), arg2);
             if (arg3 == "kitchen")
             {
-                arg2.transform.position = new Vector3(0f, 0f, arg2.transform.position.z);
+                //arg2.transform.position = new Vector3(0f, 0f, arg2.transform.position.z);
             }
             else if (arg3 == "table")
             {
