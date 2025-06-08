@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JSONParser {
+public class JSONParser
+{
 
-    public static (List<DialogueScreen>, Goal) parseStory(TextAsset file) {
+    public static (List<DialogueScreen>, Goal) parseStory(TextAsset file)
+    {
 
         string fullText = file.text;
         string[] lines = fullText.Split('\n');
@@ -33,10 +35,16 @@ public class JSONParser {
                 tmpgoal = new Goal(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim());
                 i += 2;
             }
+            else if (currentRead.Equals("SETUP"))
+            {
+                StoryManager.instance().parseSetup(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim());
+                i += 2;
+            }
+
+
         }
-        
         return (tmplist, tmpgoal);
-        
     }
-    
+
 }
+

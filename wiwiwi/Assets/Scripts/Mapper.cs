@@ -17,7 +17,8 @@ public enum GameState
     Farming,
     Fishing,
     Recipe,
-    Inventory
+    Inventory,
+    Boating
 }
 
 public enum GoalType

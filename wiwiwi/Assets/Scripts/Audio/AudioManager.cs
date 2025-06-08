@@ -83,7 +83,6 @@ public class AudioManager : MonoBehaviour
     {
         if (!musicSource.isPlaying)
         {
-            Debug.Log("hello?\n");
             musicSource.clip = backgroundList[(int)audio];
 
             musicSource.Play();
@@ -92,8 +91,9 @@ public class AudioManager : MonoBehaviour
         {
             if (musicSource.clip != backgroundList[(int)audio])
             {
-                musicSource.clip = backgroundList[(int)audio];
-                musicSource.Play();
+                musicSource.Stop();
+                /*musicSource.clip = backgroundList[(int)audio];
+                musicSource.Play();*/
             }
         }
         if (musicSource.isPlaying)

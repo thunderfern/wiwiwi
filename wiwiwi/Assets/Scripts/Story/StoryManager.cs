@@ -1,18 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryManager : MonoBehaviour {
+public class StoryManager : MonoBehaviour
+{
 
     // Singleton
 
     private static StoryManager _instance;
 
-    private StoryManager() {
+    private StoryManager()
+    {
         _instance = this;
     }
 
-    public static StoryManager instance() {
-        if (_instance == null) {
+    public static StoryManager instance()
+    {
+        if (_instance == null)
+        {
             StoryManager instance = new StoryManager();
             _instance = instance;
         }
@@ -22,6 +26,7 @@ public class StoryManager : MonoBehaviour {
     // Fields
 
     public List<TextAsset> storyFiles;
+    public List<GameObject> characterObj;
 
     public void read(StoryPart storyPart)
     {
@@ -37,5 +42,39 @@ public class StoryManager : MonoBehaviour {
         World.instance().goal = parseResult.Item2;
         Debug.Log(World.instance().goal.character);
         Debug.Log(World.instance().goal.goalType);
+    }
+
+    public void parseSetup(string arg1, string arg2, string arg3)
+    {
+        if (arg1 == "position")
+        {
+            Character curchar = Enum.Parse(typeof(Character), arg2);
+            if (arg3 == "kitchen")
+            {
+                arg2.transform.position = new Vector3(0f, 0f, arg2.transform.position.z);
+            }
+            else if (arg3 == "table")
+            {
+                if (curchar == Character.MrMole)
+                {
+
+                }
+            }
+        }
+        else if (arg1 == "unlock")
+        {
+            if (arg2 == "Platypus")
+            {
+
+            }
+        }
+        else if (arg1 == "take")
+        {
+            // arg2 is collectible
+        }
+        else if (arg1 == "fish")
+        {
+            //set fish
+        }
     }
 }

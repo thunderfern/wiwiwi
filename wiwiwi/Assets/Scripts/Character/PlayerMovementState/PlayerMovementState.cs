@@ -27,6 +27,15 @@ public class PlayerMovementState {
         else if (xchange < -0.01f) xchange = Math.Min(0f, xchange + playerSpeed * 2 * Time.deltaTime);
         else xchange = 0;
 
+        if (xchange < 0)
+        {
+            playerObj.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (xchange > 0)
+        {
+            playerObj.GetComponent<SpriteRenderer>().flipX = true;
+        }
+
         playerObj.transform.position = playerObj.transform.position + new Vector3(xchange * Time.deltaTime, 0, 0);
         //debugState();
         return stateUpdate(playerObj, player);

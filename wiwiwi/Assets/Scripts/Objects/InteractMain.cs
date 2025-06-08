@@ -14,41 +14,42 @@ public class InteractMain : MonoBehaviour
     {
         this.layermask = layermask;
         this.obj = obj;
-        this.colliding = false;
+        colliding = false;
     }
 
     public bool allowInteraction()
     {
-        if (!interactable) {
+        if (!interactable)
+        {
             obj.layer = LayerMask.NameToLayer("Default");
             return false;
         }
         else obj.layer = (int)Mathf.Log(objlayermask.value, 2);
-        if (World.instance().curstate != GameState.Platformer) return false;
+        if (World.instance().curstate != GameState.Platformer && World.instance().curstate != GameState.Boating) return false;
         RaycastHit2D leftray = Physics2D.Raycast(obj.transform.position, Vector2.left, 2f, layermask);
         RaycastHit2D rightray = Physics2D.Raycast(obj.transform.position, Vector2.right, 2f, layermask);
         if (leftray && leftray.collider.gameObject == colObj)
         {
-            if (objlayermask == LayerMask.NameToLayer("InteractableE"))
+            if (objlayermask == (1 << LayerMask.NameToLayer("InteractableE")))
             {
                 if (colObj.GetComponent<PlayerMain>().interactableE == obj)
                 {
                     return true;
                 }
             }
-                else if (objlayermask == LayerMask.NameToLayer("InteractableB"))
-                {
-                    if (colObj.GetComponent<PlayerMain>().interactableB == obj) return true;
-                }
-                else return true;
+            else if (objlayermask == (1 << LayerMask.NameToLayer("InteractableB")))
+            {
+                if (colObj.GetComponent<PlayerMain>().interactableB == obj) return true;
+            }
+            else return true;
         }
         if (rightray && rightray.collider.gameObject == colObj)
         {
-            if (objlayermask == LayerMask.NameToLayer("InteractableE"))
+            if (objlayermask == (1 << LayerMask.NameToLayer("InteractableE")))
             {
                 if (colObj.GetComponent<PlayerMain>().interactableE == obj) return true;
             }
-            else if (objlayermask == LayerMask.NameToLayer("InteractableB"))
+            else if (objlayermask == (1 << LayerMask.NameToLayer("InteractableB")))
             {
                 if (colObj.GetComponent<PlayerMain>().interactableB == obj) return true;
             }
@@ -56,12 +57,12 @@ public class InteractMain : MonoBehaviour
         }
         if (colliding)
         {
-            if (objlayermask == LayerMask.NameToLayer("InteractableE"))
+            if (objlayermask == (1 << LayerMask.NameToLayer("InteractableE")))
             {
                 if (colObj.GetComponent<PlayerMain>().interactableE == obj) return true;
             }
-            
-            if (objlayermask == LayerMask.NameToLayer("InteractableB"))
+
+            if (objlayermask == (1 << LayerMask.NameToLayer("InteractableB")))
             {
                 if (colObj.GetComponent<PlayerMain>().interactableB == obj) return true;
             }
@@ -70,13 +71,31 @@ public class InteractMain : MonoBehaviour
         return false;
     }
 
-    void OnTriggerEnter2D(Collider2D col) {
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject == colObj)
+        {
+            Debug.Log(obj + "enter");
+            colliding = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject == colObj)
+        {
+            Debug.Log(obj + "exit");
+            colliding = false;
+        }
+    }
+    
+    void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject == colObj) {
             colliding = true;
         }
     }
 
-    void OnTriggerExit2D(Collider2D col) {
+    void OnCollisionExit2D(Collision2D col) {
         if (col.gameObject == colObj) {
             colliding = false;
         }

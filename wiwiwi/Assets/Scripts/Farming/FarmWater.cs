@@ -6,9 +6,11 @@ public class FarmWater : MonoBehaviour
     public GameObject collectible;
     public GameObject obj;
     private InteractMain interaction;
+    //public ClickMain clicker;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //clicker = new ClickMain(obj);
         interaction = GetComponent<InteractMain>();
         obj.SetActive(false);
     }
@@ -24,5 +26,13 @@ public class FarmWater : MonoBehaviour
                 obj.SetActive(false);
             }
         }
+        /*if (clicker.hover())
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                collectible.SetActive(true);
+                obj.SetActive(false);
+            }
+        }*/
     }
 }
