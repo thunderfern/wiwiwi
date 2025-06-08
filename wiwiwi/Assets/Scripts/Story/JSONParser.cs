@@ -35,11 +35,11 @@ public class JSONParser
                 tmpgoal = new Goal(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim());
                 i += 2;
             }
-            else if (currentRead.Equals("SETUP"))
+            /*else if (currentRead.Equals("SETUP"))
             {
                 StoryManager.instance().parseSetup(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim());
                 i += 2;
-            }
+            }*/
 
 
         }
