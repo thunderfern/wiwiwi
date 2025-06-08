@@ -1,15 +1,16 @@
 DIALOGUE
 
 Player
-happy
-null
-Why hello there Mr. Mole, it's quite rare to see a new face around here, how can I help you today?
+Neutral
+Null
+Oh, I think it's Mr. Mole!
 
 GOAL
-interact
+Interact
 Mr. Mole
 Tutorial03
 
 SETUP
-Mr. Mole sit
-
+Unlock
+Character
+Mole

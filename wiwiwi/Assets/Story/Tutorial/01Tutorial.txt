@@ -1,34 +1,36 @@
 DIALOGUE
 
 Narrator
-null
-null
-Once upon a time, a little mouse was eating alone all in her little burrow.
+Null
+Null
+Once upon a time, there was a little mouse who was eating all alone in her tiny burrow.
 
 Player
-shocked
-null
-Oh my GYATT i made too much soup AGAINN!!!
+Shocked
+Null
+Oh my goodness, I made too much soup again!
 
 Player
-sad
-null
-Oh woe is me how I wish I wasnt an orphan so I dont have to eat by myself
+Sad
+Null
+Oh, how I wish I wasn’t an orphan so I could have others to eat with.
 
 Unknown
-null
-knock
-knock knock
+Null
+Knock
+<i>Knock Knock</i>
 
 Player
-neutral
-null
+Neutral
+Null
 Who could it be?
 
-GOAL
-interact
-Mr. Mole
-Tutorial02
+Player
+Neutral
+Null
+Let's go check the top of the burrow.
 
-SETUP
-Mr. Mole burrow
+GOAL
+Go
+Burrow
+Tutorial02

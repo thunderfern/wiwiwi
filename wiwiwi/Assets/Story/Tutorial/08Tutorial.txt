@@ -1,11 +1,16 @@
 DIALOGUE
 
 Player
-happy
-null
-lets give to mrmole
+Happy
+Null
+Great!
+
+Player
+Happy
+Null
+We will also need onion for the soup.
 
 GOAL
-interact
-Mr. Mole
+Collect
+Onion
 Tutorial09

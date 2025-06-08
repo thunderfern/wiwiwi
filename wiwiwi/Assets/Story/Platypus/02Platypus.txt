@@ -1,0 +1,51 @@
+DIALOGUE
+
+Mr. Platypus
+Drowsy
+GibberishPlatypus
+?!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Is that a young cod I see? It's been a while since I've seen someone as young as you catch a fish so quickly!
+
+Player
+Happy
+Null
+Ehe!
+
+Player
+Neutral
+Null
+Do you like soup Mister?
+
+Player
+Happy
+Null
+Soup is my specialty! Would you like to come to my burrow and have lunch with us?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+I would love to join you. Soup would be fantastic! It's your fish after all.
+
+Player
+Happy
+Null
+Great! Let's head to the kitchen.
+
+GOAL
+Go
+Kitchen
+Platypus03
+
+SETUP
+
+Position
+Mole
+KitchenLeft
+
+Position
+Platypus
+KitchenMiddle

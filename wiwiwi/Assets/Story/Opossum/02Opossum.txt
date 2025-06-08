@@ -1,0 +1,11 @@
+DIALOGUE
+
+Opossum
+Happy
+GibberishOpossum
+There are mushrooms all around here and up the leaves!
+
+GOAL
+Collect
+Mushroom
+Opossum03

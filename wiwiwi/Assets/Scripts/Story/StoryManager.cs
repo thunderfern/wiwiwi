@@ -28,9 +28,16 @@ public class StoryManager : MonoBehaviour
 
     public List<TextAsset> storyFiles;
     public List<GameObject> characterObj;
+    public GameObject boat;
+    public GameObject fishing;
+    public GameObject moleHome;
+    public GameObject platHome;
+    public GameObject oppHome;
+    public GameObject crate;
 
     public void read(StoryPart storyPart)
     {
+        if (storyPart == StoryPart.Platypus01) characterObj[2].SetActive(true);
         Debug.Log(storyPart);
         TextAsset parseFile = storyFiles[(int)storyPart];
 
@@ -38,44 +45,11 @@ public class StoryManager : MonoBehaviour
         world.prevstate.Insert(0, world.curstate);
         world.curstate = GameState.Dialogue;
 
-        (List<DialogueScreen>, Goal) parseResult = JSONParser.parseStory(storyFiles[(int)storyPart]);
-        DialogueManager.instance().updateDialogue(parseResult.Item1);
+        (List<DialogueScreen>, Goal, List<Setup>) parseResult = JSONParser.parseStory(storyFiles[(int)storyPart]);
+        DialogueManager.instance().updateDialogue(parseResult.Item1, parseResult.Item3);
         World.instance().goal = parseResult.Item2;
         Debug.Log(World.instance().goal.character);
         Debug.Log(World.instance().goal.goalType);
     }
 
-    public void parseSetup(string arg1, string arg2, string arg3)
-    {
-        if (arg1 == "position")
-        {
-            Character curchar = (Character)Enum.Parse(typeof(Character), arg2);
-            if (arg3 == "kitchen")
-            {
-                //arg2.transform.position = new Vector3(0f, 0f, arg2.transform.position.z);
-            }
-            else if (arg3 == "table")
-            {
-                if (curchar == Character.MrMole)
-                {
-
-                }
-            }
-        }
-        else if (arg1 == "unlock")
-        {
-            if (arg2 == "Platypus")
-            {
-
-            }
-        }
-        else if (arg1 == "take")
-        {
-            // arg2 is collectible
-        }
-        else if (arg1 == "fish")
-        {
-            //set fish
-        }
-    }
 }

@@ -1,0 +1,111 @@
+DIALOGUE
+
+Player 
+Thinking
+Null
+What is this crate doing here?
+
+Opossum
+Shocked
+Null
+Ahhh!
+
+Player 
+Shocked
+Null
+Woah! You Scared me!
+
+Opossum
+Scared
+Null
+A-A I-!
+
+Player
+Happy
+Null
+Its okay, I won't hurt you. 
+
+Player
+Happy
+Null
+This is my first time seeing an Opossum around here! What brings you here?
+
+Opossum
+Shy
+GibberishOpossum
+U-uh, I live near h-here but I n-noticed more noise c-coming from this d-direction..and..
+
+Opossum
+Shy
+Null
+...
+
+Player
+Happy
+Null
+Oh, sorry about that! It's been getting more lively in my burrow since my family keeps growing!
+
+Opossum
+Shy
+GibberishOpossum
+Y-your family?
+
+Player
+Happy
+Null
+Yeah! Would you like to come meet them? We can have soup together!
+
+Opossum
+Shy
+Null
+Maybe...
+
+Player
+Thinking
+Null
+I think Mr. Mole was planning to make mushroom soup today! 
+
+Player
+Happy
+Null
+Do you like mushroom soup?
+
+Opossum
+Shy
+GibberishOpossum
+...It's my favourite...
+
+Player
+Happy
+Null
+Great! Let's go collect the ingredients for it! 
+
+Player
+Thinking
+Null
+Although I'm not sure where to get mushrooms from...
+
+Opossum
+Happy
+GibberishOpossum
+I know! Come to the forest! There are tons of mushrooms where I live!
+
+Player
+Neutral
+Null
+...
+
+Player
+Happy
+Null
+!!
+
+GOAL
+Go
+Forest
+Opossum02
+
+SETUP
+Position
+Opossum
+Forest

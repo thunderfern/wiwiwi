@@ -1,0 +1,25 @@
+DIALOGUE
+
+Opossum
+Neutral
+GibberishOpossum
+Did you find the mushrooms?
+
+Player
+Happy
+Null
+Yep! Let's go to my burrow. We'll head to the kitchen.
+
+GOAL
+Go
+Kitchen
+Opossum05
+
+SETUP
+Position
+Mole
+KitchenLeft
+
+Position
+Opossum
+KitchenMiddle

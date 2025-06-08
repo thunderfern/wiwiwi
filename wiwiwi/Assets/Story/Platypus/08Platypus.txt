@@ -1,0 +1,51 @@
+DIALOGUE
+
+Mr. Platypus
+Drowsy
+GibberishPlatypus
+Who is it?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Ah it's Little Mouse. Here is your gift as promised.
+
+Player
+Shocked
+GibberishPlatypus
+Woah! Is that a boat? It's so huge! I've only seen those in story books!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Yes...It's my old companion that has kept me company while fishing around. I can't fish anymore so I'd like to give it to someone who still can.
+
+Player
+Awkward
+Null
+Mister...can you really give up something that important to me?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Of course, its been a long time since I could use it. I've only kept it around because it kept me company, but since I have a new family now I have no need for it.
+
+Player
+Happy
+Null
+...I'll be sure to use it to catch a lot of fish for you, Mister!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+I will be looking forward to that.
+
+GOAL
+Null
+Null
+Null
+
+SETUP
+Unlock
+Home
+Platypus

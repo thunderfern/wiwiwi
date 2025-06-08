@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+Happy
+Null
+Great! I have all the ingredients needed for fish soup. Let's make the soup!
+
+GOAL
+Collect
+FishSoup
+Platypus06

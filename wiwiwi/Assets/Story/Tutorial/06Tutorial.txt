@@ -1,11 +1,11 @@
 DIALOGUE
 
 Player
-happy
-null
-lets make soup
+Happy
+Null
+Alright!, lets go to the garden to collect the vegetables for Mr. Mole!
 
 GOAL
-go
-kitchen
+Go
+Garden
 Tutorial07

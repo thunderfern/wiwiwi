@@ -37,8 +37,8 @@ public class RecipeMain : MonoBehaviour
 
         recipes = new List<Recipe>();
         this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Potato, Collectible.Clam, Collectible.Basil }, Collectible.ClamChowder));
-        this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Carrot, Collectible.Basil }, Collectible.CarrotSoup));
-        this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Cod, Collectible.Tomato, Collectible.Potato }, Collectible.FishSoup));
+        this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Carrot, Collectible.Tomato, Collectible.Onion }, Collectible.CarrotSoup));
+        this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Cod, Collectible.Tomato, Collectible.Basil }, Collectible.FishSoup));
         this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Mushroom, Collectible.Onion }, Collectible.MushroomSoup));
         this.recipes.Add(new Recipe(new List<Collectible> { Collectible.Tomato, Collectible.Onion, Collectible.Basil }, Collectible.TomatoSoup));
 

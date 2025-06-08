@@ -17,7 +17,7 @@ public class FarmCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (collectible == Collectible.Tomato) obj.GetComponent<SpriteRenderer>().sprite = spriteList[0];
+        if (collectible == Collectible.Basil) obj.GetComponent<SpriteRenderer>().sprite = spriteList[0];
         if (collectible == Collectible.Onion) obj.GetComponent<SpriteRenderer>().sprite = spriteList[1];
         if (collectible == Collectible.Carrot) obj.GetComponent<SpriteRenderer>().sprite = spriteList[2];
         if (collectible == Collectible.Potato) obj.GetComponent<SpriteRenderer>().sprite = spriteList[3];

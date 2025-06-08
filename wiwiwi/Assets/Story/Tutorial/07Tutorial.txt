@@ -1,11 +1,16 @@
 DIALOGUE
 
 Player
-happy
-null
-add the ingredients
+Happy
+Null
+We will need a carrot. First, let's plant the seeds.
+
+Player
+Happy
+Null
+Then we will water and harvest!
 
 GOAL
-collect
-TomatoSoup
+Collect
+Carrot
 Tutorial08

@@ -1,0 +1,92 @@
+DIALOGUE
+
+Mr. Mole
+Happy
+GibberishMole
+Wow! You did a fantastic job little mouse, this soup reminds me of my hometown perfectly!
+
+Player
+Happy
+Null
+Why thank you Mr. Mole, may I ask why you left your hometown?
+
+Mr. Mole
+Sad
+GibberishMole
+Well it's a bit of a sad story really… my old home got destroyed and we all had to scatter and find new homes… 
+
+Mr. Mole
+Sad
+GibberishMole
+This is why I was looking for a new burrow.
+
+Player
+Thinking
+Null
+…
+
+Player
+Happy
+Null
+Mr. Mole, why don’t you live in my burrow? We can be next door neighbours and you can come for soup whenever you like!
+
+Mr. Mole
+Happy
+GibberishMole
+Little mouse… that is so kind of you but I’m afraid I cannot burden you any longer.
+
+Mr. Mole
+Happy
+GibberishMole
+You already have been so kind to me.
+
+Player
+Sad
+Null
+To be honest Mr. Mole, I have been feeling a little lonely and sad lately... 
+
+Player
+Happy
+Null
+...but eating together with you today has made me very happy for the first time in a long time.
+
+Player
+Happy
+Null
+If you would like I’d be happy to have you as a neighbour.
+
+Mr. Mole
+Thinking
+GibberishMole
+...Well if you insist.
+
+Player
+Happy
+Null
+I do!
+
+Mr. Mole
+Happy
+GibberishMole
+Thank you so much!
+
+GOAL
+Null
+Null
+Null
+
+SETUP
+
+Unlock
+Character
+Platypus
+
+Unlock
+Character
+Opossum
+
+Unlock
+Home
+Mole
+
+

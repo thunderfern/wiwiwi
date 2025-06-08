@@ -15,29 +15,33 @@ public class Goal
 
     public Goal(string a, string b, string c)
     {
-        goalType = Mapper.instance().goalTypeMap[a];
+        for (int i = 1; i < 4; i++)
+        {
+            StoryManager.instance().characterObj[i].GetComponent<InteractMain>().interactable = false;
+        }
+        goalType = (GoalType)Enum.Parse(typeof(GoalType), a);
         if (goalType == GoalType.Interact)
         {
             character = Mapper.instance().characterMap[b];
+            StoryManager.instance().characterObj[(int)character].GetComponent<InteractMain>().interactable = true;
         }
         else if (goalType == GoalType.Go)
         {
-            location = Mapper.instance().locationMap[b];
+            location = (Location)Enum.Parse(typeof(Location), b);
         }
         else if (goalType == GoalType.Collect)
         {
-            collectible = Mapper.instance().collectibleMap[b];
+            collectible = (Collectible)Enum.Parse(typeof(Collectible), b);
         }
         else if (goalType == GoalType.Open)
         {
-            icon = Mapper.instance().iconMap[b];
+            icon = (Icon)Enum.Parse(typeof(Icon), b);
         }
         nextAction = (StoryPart)Enum.Parse(typeof(StoryPart), c);
     }
 
     public void goalComplete()
     {
-        Debug.Log("slacker\n");
         StoryManager.instance().read(nextAction);
     }
 

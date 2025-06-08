@@ -1,0 +1,56 @@
+DIALOGUE
+
+Mr. Mole
+Happy
+GibberishMole
+Welcome back Little Mouse.
+
+Mr. Mole
+Shocked
+GibberishMole
+Oh? And who might you be?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+I'm Mr. Platypus, nice to meet you. 
+
+Mr. Mole
+Happy
+GibberishMole
+Welcome! I'm Mr. Mole. Will you be joining us for lunch Mr. Platypus?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Yes, if you'll have me.
+
+Mr. Mole
+Happy
+GibberishMole
+Of course! The more the merrier!
+
+Mr. Mole
+Happy
+GibberishMole
+Mr. Platypus, what is your favourite soup?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Hm... I like fish, so maybe fish soup?
+
+Mr. Mole
+Happy
+GibberishMole
+I love fish soup! Please have a seat while me and Little Mouse prepare it for you.
+
+Player
+Happy
+Null
+Great! First we will need a tomato.
+
+GOAL
+Collect
+Tomato
+Platypus04

@@ -4,7 +4,9 @@ using UnityEngine;
 public enum Character
 {
     Player,
-    MrMole,
+    Mole,
+    Platypus,
+    Opossum,
     Narrator,
     Unknown
 };
@@ -26,7 +28,8 @@ public enum GoalType
     Interact,
     Go,
     Collect,
-    Open
+    Open,
+    Null
 };
 
 public enum Icon
@@ -45,7 +48,29 @@ public enum StoryPart
     Tutorial06,
     Tutorial07,
     Tutorial08,
-    Tutorial09
+    Tutorial09,
+    Tutorial10,
+    Tutorial11,
+    Tutorial12,
+    Platypus01,
+    Platypus02,
+    Platypus03,
+    Platypus04,
+    Platypus05,
+    Platypus06,
+    Platypus07,
+    Platypus08,
+    Opossum01,
+    Opossum02,
+    Opossum03,
+    Opossum04,
+    Opossum05,
+    Opossum06,
+    Opossum07,
+    Opossum08,
+    Opossum09,
+    Opossum10,
+    Null
 };
 
 public enum Emotion
@@ -56,6 +81,10 @@ public enum Emotion
     Awkward,
     Shocked,
     Thinking,
+    Embarrassed,
+    Drowsy,
+    Scared,
+    Shy,
     Null
 }
 
@@ -81,7 +110,10 @@ public enum Location
 {
     Burrow,
     Kitchen,
-    Garden
+    Garden,
+    DiningRoom,
+    Forest,
+    Pond
 }
 
 public enum AudioType
@@ -94,11 +126,16 @@ public enum AudioType
     Pond,
     OpenDoor,
     PageFlip,
-    Kick,
     LandingOnGrass,
     LandingOnDirt,
     Cooking,
-    WateringPlants
+    WateringPlants,
+    Knock,
+    GibberishMole,
+    GibberishOpossum,
+    GibberishPlatypus,
+    RainThunder,
+    Null
 }
 
 public enum BackgroundMusic
@@ -134,7 +171,9 @@ public class Mapper
         characterMap = new Dictionary<string, Character>()
         {
             { "Player", Character.Player },
-            { "Mr. Mole", Character.MrMole },
+            { "Mr. Mole", Character.Mole },
+            { "Mr. Platypus", Character.Platypus },
+            { "Opossum", Character.Opossum },
             { "Narrator", Character.Narrator },
             { "Unknown", Character.Unknown },
         };

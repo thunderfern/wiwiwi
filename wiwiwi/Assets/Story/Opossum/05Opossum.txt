@@ -1,0 +1,26 @@
+DIALOGUE
+
+Mr. Mole
+Shocked
+GibberishMole
+Oh? Welcome!-
+
+Opossum
+Scared
+Null
+AHH!!
+
+Mr. Mole
+Shocked
+Null
+!!
+
+GOAL
+Go
+Kitchen
+Opossum06
+
+SETUP
+Position
+Opossum
+Cave

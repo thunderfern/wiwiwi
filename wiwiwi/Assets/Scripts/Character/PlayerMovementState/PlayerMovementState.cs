@@ -5,7 +5,7 @@ using System;
 
 public class PlayerMovementState {
 
-    private float xchange;
+    public float xchange;
     private float playerSpeed;
 
     public PlayerMovementState()
@@ -92,7 +92,15 @@ public class Fall : PlayerMovementState {
         Animator anim = playerObj.GetComponent<Animator>();
         anim.SetInteger("playerMovement", 3);
 
-        if (player.isGrounded) return new Idle();
+        if (player.isGrounded)
+        {
+            if (BackgroundEffectsMain.inBurrow)
+            {
+                AudioManager.instance().PlaySound(AudioType.LandingOnDirt);
+            }
+            else AudioManager.instance().PlaySound(AudioType.LandingOnGrass);
+            return new Idle();
+        }
 
         return this;
     }
@@ -108,9 +116,18 @@ public class Idle : PlayerMovementState {
     public override PlayerMovementState stateUpdate(GameObject playerObj, PlayerMain player)
     {
         Animator anim = playerObj.GetComponent<Animator>();
-        anim.SetInteger("playerMovement", 1);
+        if (xchange != 0)
+        {
+            anim.SetInteger("playerMovement", 1);
+            AudioManager.instance().PlaySound(AudioType.Footsteps);
+        }
+        else anim.SetInteger("playerMovement", 0);
 
-        if (Input.GetKey(KeyCode.W)) return new Jump();
+        if (Input.GetKey(KeyCode.W))
+        {
+            AudioManager.instance().PlaySound(AudioType.Jumping);
+            return new Jump();
+        }
 
         return this;
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class JSONParser
 {
 
-    public static (List<DialogueScreen>, Goal) parseStory(TextAsset file)
+    public static (List<DialogueScreen>, Goal, List<Setup>) parseStory(TextAsset file)
     {
 
         string fullText = file.text;
@@ -13,6 +13,7 @@ public class JSONParser
         string currentRead = "";
 
         List<DialogueScreen> tmplist = new List<DialogueScreen>();
+        List<Setup> tmpsetup = new List<Setup>();
         Goal tmpgoal = new Goal();
 
         for (int i = 0; i < lines.Length; i++)
@@ -35,15 +36,14 @@ public class JSONParser
                 tmpgoal = new Goal(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim());
                 i += 2;
             }
-            /*else if (currentRead.Equals("SETUP"))
+            else if (currentRead.Equals("SETUP"))
             {
-                StoryManager.instance().parseSetup(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim());
+                tmpsetup.Add(new Setup(lines[i].Trim(), lines[i + 1].Trim(), lines[i + 2].Trim()));
                 i += 2;
-            }*/
-
+            }
 
         }
-        return (tmplist, tmpgoal);
+        return (tmplist, tmpgoal, tmpsetup);
     }
 
 }

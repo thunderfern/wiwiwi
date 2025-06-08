@@ -1,0 +1,26 @@
+DIALOGUE
+
+Player
+Neutral
+Null
+Oh no! 
+
+Mr. Mole
+Shocked
+GibberishMole
+...she ran off...
+
+Player
+Thinking
+Null
+I think she lives somewhere in the forest...
+
+Player
+Neutral
+Null
+I'll go look for her right now!
+
+GOAL
+Interact
+Opossum
+Opossum07

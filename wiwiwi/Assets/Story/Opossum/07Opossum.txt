@@ -1,0 +1,66 @@
+DIALOGUE
+
+Player
+Neutral
+Null
+Opossum? 
+
+Opossum
+Shy
+GibberishOpossum
+Sorry Miss, I was just so scared. I didn't know your family wasn't mice...
+
+Player
+Happy
+Null
+You don't have to be sorry, Opossum.
+
+Opossum
+Shy
+GibberishOpossum
+When you said that your family became larger...I thought that meant your family came back.
+
+Opossum
+Shy
+GibberishOpossum
+And I thought that maybe I would see Mom and Sis again...
+
+Player
+Happy
+Null
+To be honest, I was really lonely when I was alone, but being with them made me feel happy and less lonely.
+
+Player
+Happy
+Null
+...And I think thats what makes family, family.
+
+Opossum
+Shy
+GibberishOpossum
+...That makes sense.
+
+Opossum
+Shy
+GibberishOpossum
+I would like to apologize to Mr. Mole.
+
+Player
+Happy
+Null
+Then let's go back to the kitchen and have soup together.
+
+GOAL
+Go
+Kitchen
+Opossum08
+
+SETUP
+Position
+Mole
+KitchenLeft
+
+Position
+Opossum
+KitchenMiddle
+

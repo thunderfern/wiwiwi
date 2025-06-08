@@ -1,0 +1,16 @@
+DIALOGUE
+
+Player
+Happy
+Null
+Great, the soup is all done! Let's go serve it to Mr. Mole and eat together!
+
+GOAL
+Go
+DiningRoom
+Tutorial12
+
+SETUP
+Position
+Mole
+DinnerTable

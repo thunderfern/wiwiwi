@@ -1,0 +1,116 @@
+DIALOGUE
+
+Mr. Platypus
+Shocked
+Null
+!!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+This is the best fish soup I've ever had! It reminds me of my mother's cooking.
+
+Player
+Thinking
+Null
+Is your mother a fisher too?
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Yes, my whole family!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+My son and daughter, grandma and grandpa, great grandma and great grandpa were all fishers!
+
+Mr. Mole
+Shocked
+GibberishMole
+You had children, Mr. Platypus?
+
+Mr. Platypus
+Sad
+GibberishPlatypus
+Yes, but it gets harder to catch fish, especially in the wintertime.
+
+Mr. Platypus
+Sad
+GibberishPlatypus 
+It's only natural for us to live in solidarity and fish on our own.
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+My children left me when they were just four months old! They were expert fishers by then already.
+
+Player
+Neutral
+Null
+...
+
+Player
+Happy
+Null
+We'll be your family Mister!
+
+Mr. Platypus
+Shocked
+Null
+?!
+
+Mr. Mole
+Happy
+GibberishMole
+What a great idea! You can move in with us! It must've been hard living by yourself all this time.
+
+Mr. Platypus
+Sad
+GibberishPlatypus
+...Thank you, but I'm afraid that I cannot help you with anything. 
+
+Mr. Platypus
+Sad
+GibberishPlatypus
+My back's all worn out and I cant even catch fish anymore.
+
+Player
+Happy
+Null
+But you helped me learn how to fish!
+
+Player
+Happy
+Null
+If you stay with us you can teach us how to fish and we can continue your lineage of fishermen as family!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Haha, I guess I could stay for a while then.
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Thank you for the soup and home Little Mouse, I would like to return your generosity by giving you a gift. 
+
+Player
+Neutral
+Null
+?!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+Please meet me at the dock where you first met me.
+
+GOAL
+Go
+Pond
+Platypus08
+
+SETUP
+Unlock
+Action
+Boat

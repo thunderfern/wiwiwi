@@ -1,0 +1,50 @@
+DIALOGUE
+
+Opossum
+Shy
+GibberishOpossum
+Hello Mr. Mole.
+
+Mr. Mole
+Happy
+GibberishMole
+Welcome back Opossum.
+
+Opossum
+Shy
+GibberishOpossum
+Sorry I was rude earlier and ran away...
+
+Mr. Mole
+Happy
+GibberishMole
+Haha, why are you worrying about that? 
+
+Mr. Mole
+Happy
+GibberishMole
+Come and have some soup with us, the mushroom soup is almost ready!
+
+Opossum
+Happy
+GibberishOpossum
+Okay! Thank you!
+
+Player
+Happy
+Null
+Let's make the soup!
+
+GOAL
+Collect
+MushroomSoup
+Opossum09
+
+SETUP
+Position
+Opossum
+DiningTable
+
+Position
+Mole
+DiningTable

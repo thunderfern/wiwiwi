@@ -1,0 +1,16 @@
+DIALOGUE
+
+Player
+Happy
+Null
+I think Opossum will really appreciate this!
+
+Player
+Happy
+Null
+They are already at the dining room, so lets join them!
+
+GOAL
+Go
+DiningRoom
+Opossum10

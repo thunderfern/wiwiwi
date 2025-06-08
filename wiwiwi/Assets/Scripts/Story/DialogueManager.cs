@@ -28,23 +28,32 @@ public class DialogueManager : MonoBehaviour {
     public GameObject characterPortraitObject;
     public SpriteRenderer characterPortraitRenderer;
     public List<DialogueScreen> dialogueStream;
+    public List<Setup> setupStream;
     public float curTextTimer;
 
     public List<Sprite> playerSprites;
+    public List<Sprite> moleSprites;
+    public List<Sprite> platypusSprites;
+    public List<Sprite> opposumSprites;
 
-    private List<List<Sprite>> characterSprites;
+    public List<List<Sprite>> characterSprites;
 
-    void Start()
+    void Awake()
     {
         characterSprites = new List<List<Sprite>>();
         characterSprites.Add(playerSprites);
+        characterSprites.Add(moleSprites);
+        characterSprites.Add(platypusSprites);
+        characterSprites.Add(opposumSprites);
         curTextTimer = 0;
     }
 
     void Update()
     {
-        if (World.instance().curstate == GameState.Dialogue) {
-            if (dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters < dialogueStream[0].dialogueText.Length) {
+        if (World.instance().curstate == GameState.Dialogue && dialogueStream.Count > 0)
+        {
+            if (dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters < dialogueStream[0].dialogueText.Length)
+            {
                 curTextTimer += Time.deltaTime;
                 dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters = (int)(curTextTimer * 20);
                 if (Input.GetKeyDown(KeyCode.E)) dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters = dialogueStream[0].dialogueText.Length;
@@ -53,10 +62,11 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-    public void updateDialogue(List<DialogueScreen> dialogueStream)
+    public void updateDialogue(List<DialogueScreen> dialogueStream, List<Setup> setupStream)
     {
         dialogueObject.SetActive(true);
         this.dialogueStream = dialogueStream;
+        this.setupStream = setupStream;
         this.display();
     }
 
@@ -74,14 +84,27 @@ public class DialogueManager : MonoBehaviour {
         if (dialogueStream[0].character != Character.Narrator && dialogueStream[0].character != Character.Unknown)
         {
             characterPortraitObject.SetActive(true);
+            Debug.Log((int)dialogueStream[0].character);
+            Debug.Log(characterSprites.Count);
+            //Debug.Log(characterSprites[(int)dialogueStream[0].character]);
+            //Debug.Log(characterSprites[(int)dialogueStream[0].character][(int)dialogueStream[0].emotion]);
+            //Debug.Log(characterPortraitRenderer.sprite);
             characterPortraitRenderer.sprite = characterSprites[(int)dialogueStream[0].character][(int)dialogueStream[0].emotion];
         }
         else characterPortraitObject.SetActive(false);
+
+        // sound
+        AudioManager.instance().PlaySound(dialogueStream[0].audio);
     }
 
     public void displayNext() {
+        AudioManager.instance().StopSound(dialogueStream[0].audio);
         dialogueStream.RemoveAt(0);
         if (dialogueStream.Count == 0) {
+            for (int i = 0; i < setupStream.Count; i++)
+            {
+                setupStream[i].setup();
+            }
             World.instance().curstate = World.instance().prevstate[0];
             World.instance().prevstate.RemoveAt(0);
             dialogueObject.SetActive(false);

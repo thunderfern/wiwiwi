@@ -1,11 +1,11 @@
 DIALOGUE
 
 Player
-happy
-null
-lets grow veggies
+Thinking
+Null
+Hm, I don’t remember the recipe, I will check the recipe book first.
 
 GOAL
-collect
-Tomato
+Open
+Recipe
 Tutorial06

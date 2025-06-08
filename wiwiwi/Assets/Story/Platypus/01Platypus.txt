@@ -1,0 +1,57 @@
+DIALOGUE
+
+Mr. Platypus
+Drowsy
+GibberishPlatypus
+Huh? Who’s there?
+
+Player
+Neutral
+Null
+A platypus?
+
+Player
+Happy
+Null
+Hi! I live in the burrow near here, how do you do?
+
+Mr. Platypus
+Sad
+GibberishPlatypus
+Not very well, unfortunately. I haven’t been able to catch much fish these past few days. 
+
+Mr. Platypus
+Sad
+GibberishPlatypus
+It must be this old back of mine.
+
+Player
+Neutral
+Null
+...
+
+Player
+Happy
+Null
+Don't worry Mister, I will catch you some fish!
+
+Mr. Platypus
+Happy
+GibberishPlatypus
+I appreciate the help little one, here is my old fishing rod. Please be careful near the waters.
+
+Player
+Happy
+Null
+Leave it to me!
+
+GOAL
+Collect
+Cod
+Platypus02
+
+SETUP
+
+Unlock
+Action
+Fish

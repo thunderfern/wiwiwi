@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+Happy
+Null
+Great, I got a mushroom! Let's go back to Opossum.
+
+GOAL
+Interact
+Opossum
+Opossum04

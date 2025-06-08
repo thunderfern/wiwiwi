@@ -1,0 +1,11 @@
+DIALOGUE
+
+Player
+Happy
+Null
+Amazing find! Now we just need basil, which can be farmed.
+
+GOAL
+Collect
+Basil
+Platypus05

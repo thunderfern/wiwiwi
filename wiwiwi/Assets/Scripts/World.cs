@@ -26,11 +26,9 @@ public class World : MonoBehaviour {
     public Goal goal;
     public StoryManager storyManager;
     public DialogueManager dialogueManager;
-    public bool unlockFishing;
     public bool unlockMole;
-    public bool unlockOpposum;
+    public bool unlockOpossum;
     public bool unlockPlatypus;
-    public bool unlockDog;
 
     void Start()
     {
@@ -40,7 +38,6 @@ public class World : MonoBehaviour {
         this.storyManager = StoryManager.instance();
         this.dialogueManager = DialogueManager.instance();
         this.storyManager.read(StoryPart.Tutorial01);
-        
     }
 
     public void changeGoal()

@@ -30,6 +30,12 @@ public class FishingCollectible : MonoBehaviour
         else if (World.instance().curstate == GameState.Fishing)
         {
             elapsedTime += Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.W))
+            {
+                elapsedTime = 0;
+                World.instance().curstate = GameState.Platformer;
+                return;
+            }
             if (elapsedTime > 2.5f)
             {
                 elapsedTime = 0;
@@ -53,7 +59,7 @@ public class FishingCollectible : MonoBehaviour
                 {
                     nextCollectible = Collectible.Clam;
                 }
-                
+
             }
         }
     }

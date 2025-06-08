@@ -1,11 +1,51 @@
 DIALOGUE
 
 Player
-happy
-null
-What soup do you want bro
+Happy
+Null
+Why hello Mr. Mole, it's quite rare to see a new face around here. How can I help you today?
+
+Mr. Mole
+Happy
+GibberishMole
+Good day little mouse. I was looking for a new place to live when I stumbled across this burrow.
+
+Mr. Mole
+Embarrassed
+GibberishMole
+I didn’t realize someone else was living here, apologies for the disturbance. I shall take my leave.
+
+Player
+Thinking
+Null
+<i>This is my chance!</i>
+
+Player
+Happy
+Null
+Oh, don’t be sorry Mr. Mole!
+
+Player
+Happy
+Null
+Why don’t you stay for dinner?
+
+Mr. Mole
+Happy
+Null
+I would love to, if it isn’t an inconvenience.
+
+Player
+Happy
+Null
+Not at all! Please come on in! Let me show you to the dining room.
 
 GOAL
-open
-recipe
+Go
+DiningRoom
 Tutorial04
+
+SETUP
+Position
+Mole
+DiningRoom

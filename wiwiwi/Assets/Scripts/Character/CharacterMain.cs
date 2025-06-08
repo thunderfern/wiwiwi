@@ -8,9 +8,10 @@ public class CharacterMain : MonoBehaviour
     public GameObject obj;
     public Character character;
 
-    void Start()
+    void Awake()
     {
         interaction = GetComponent<InteractMain>();
+        obj.SetActive(false);
     }
 
     // Update is called once per frame

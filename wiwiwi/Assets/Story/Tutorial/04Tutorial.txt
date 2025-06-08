@@ -1,11 +1,26 @@
 DIALOGUE
 
 Player
-happy
-null
-get bro some veggies
+Neutral
+Null
+Please take a seat while I prepare the soup.
+
+Player
+Happy
+Null
+Mr. Mole, what kind of soup would you like?
+
+Mr. Mole
+Happy
+GibberishMole
+Carrot soup. I used to have it back in my hometown.
+
+Player
+Happy
+Null
+I'll go prepare it right away! I will go to the kitchen to start the stove.
 
 GOAL
-go
-garden
+Go
+Kitchen
 Tutorial05

@@ -1,0 +1,21 @@
+DIALOGUE
+
+Player
+Happy
+Null
+The soup is done now. Let's meet the others in the dining room!
+
+GOAL
+Go
+DiningRoom
+Platypus07
+
+SETUP
+
+Position
+Mole
+DinnerTable
+
+Position
+Platypus
+DinnerTable
