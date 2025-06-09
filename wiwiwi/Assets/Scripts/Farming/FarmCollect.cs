@@ -28,6 +28,7 @@ public class FarmCollect : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Inventory.instance().addIngredient(collectible);
+                AudioManager.instance().StopSound(AudioType.WateringPlants);
                 //if (World.instance().goal.character == this.character && World.instance().goal.goalType == GoalType.Interact) World.instance().goal.goalComplete();
 
                 obj.SetActive(false);

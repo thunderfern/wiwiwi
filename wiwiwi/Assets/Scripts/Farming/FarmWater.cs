@@ -24,6 +24,7 @@ public class FarmWater : MonoBehaviour
             alertInteraction.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                AudioManager.instance().PlaySound(AudioType.WateringPlants);
                 collectible.SetActive(true);
                 obj.SetActive(false);
             }

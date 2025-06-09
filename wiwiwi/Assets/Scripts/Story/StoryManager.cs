@@ -47,6 +47,7 @@ public class StoryManager : MonoBehaviour
     public void read(StoryPart storyPart)
     {
 
+
         TextAsset parseFile = storyFiles[(int)storyPart];
 
         World world = World.instance();

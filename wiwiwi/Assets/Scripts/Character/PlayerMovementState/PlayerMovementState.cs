@@ -120,10 +120,11 @@ public class Idle : PlayerMovementState {
         {
             anim.SetInteger("playerMovement", 1);
             AudioManager.instance().PlaySound(AudioType.Footsteps);
+
         }
         else anim.SetInteger("playerMovement", 0);
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) ||Input.GetKey(KeyCode.Space) )
         {
             AudioManager.instance().PlaySound(AudioType.Jumping);
             return new Jump();

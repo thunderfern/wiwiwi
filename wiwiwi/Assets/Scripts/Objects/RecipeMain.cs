@@ -67,12 +67,20 @@ public class RecipeMain : MonoBehaviour
             }
             else if (prevArrowClick.hover())
             {
-                if (curRecipe > 0) curRecipe -= 2;
+                if (curRecipe > 0)
+                {
+                    curRecipe -= 2;
+                    AudioManager.instance().PlaySound(AudioType.PageFlip);
+                }
                 DisplayRecipes();
             }
             else if (nextArrowClick.hover())
             {
-                if (curRecipe + 2 < this.recipes.Count) curRecipe += 2;
+                if (curRecipe + 2 < this.recipes.Count)
+                {
+                    curRecipe += 2;
+                    AudioManager.instance().PlaySound(AudioType.PageFlip);
+                }
                 DisplayRecipes();
             }
         }

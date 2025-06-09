@@ -35,6 +35,7 @@ public class CookingMain : MonoBehaviour
             }
             else if (cookingObjInteract.hover())
             {
+                AudioManager.instance().PlaySound(AudioType.Cooking);
                 cooking = false;
             }
         }
@@ -48,6 +49,8 @@ public class CookingMain : MonoBehaviour
                 World.instance().curstate = World.instance().prevstate[0];
                 World.instance().prevstate.RemoveAt(0);
                 if (tmpsoup != "Nothing") Inventory.instance().addIngredient((Collectible)Enum.Parse(typeof(Collectible), tmpsoup));
+                AudioManager.instance().StopSound(AudioType.Cooking);
+                waitingTime = 0;
             }
         }
     }
