@@ -9,7 +9,6 @@ public class PlatMain : MonoBehaviour
     void Start()
     {
         interaction = GetComponent<InteractMain>();
-        obj.SetActive(false);
     }
 
     // Update is called once per frame

@@ -38,7 +38,7 @@ public class World : MonoBehaviour {
         this.goal = new Goal();
         this.storyManager = StoryManager.instance();
         this.dialogueManager = DialogueManager.instance();
-        this.storyManager.read(StoryPart.Tutorial11);
+        this.storyManager.read(StoryPart.Tutorial01);
     }
 
     public void changeGoal()

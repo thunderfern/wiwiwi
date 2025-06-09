@@ -38,13 +38,15 @@ public class StoryManager : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < sittingObj.Count; i++) sittingObj[i].SetActive(false);    
+        for (int i = 0; i < sittingObj.Count; i++) sittingObj[i].SetActive(false);
+        moleHome.SetActive(false);
+        platHome.SetActive(false);
+        oppHome.SetActive(false);
     }
 
     public void read(StoryPart storyPart)
     {
 
-        Debug.Log(storyPart);
         TextAsset parseFile = storyFiles[(int)storyPart];
 
         World world = World.instance();
