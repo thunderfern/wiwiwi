@@ -7,7 +7,7 @@ Wow! You did a fantastic job little mouse, this soup reminds me of my hometown p
 
 Player
 Happy
-Null
+GibberishPlayer
 Why thank you Mr. Mole, may I ask why you left your hometown?
 
 Mr. Mole
@@ -27,7 +27,7 @@ Null
 
 Player
 Happy
-Null
+GibberishPlayer
 Mr. Mole, why don’t you live in my burrow? We can be next door neighbours and you can come for soup whenever you like!
 
 Mr. Mole
@@ -42,17 +42,17 @@ You already have been so kind to me.
 
 Player
 Sad
-Null
+GibberishPlayer
 To be honest Mr. Mole, I have been feeling a little lonely and sad lately... 
 
 Player
 Happy
-Null
+GibberishPlayer
 ...but eating together with you today has made me very happy for the first time in a long time.
 
 Player
 Happy
-Null
+GibberishPlayer
 If you would like I’d be happy to have you as a neighbour.
 
 Mr. Mole
@@ -62,7 +62,7 @@ GibberishMole
 
 Player
 Happy
-Null
+GibberishPlayer
 I do!
 
 Mr. Mole
@@ -87,6 +87,13 @@ Opossum
 
 Unlock
 Home
-Mole
+Platypus
 
+Position
+Mole
+UndoDinnerTable
+
+Position
+Player
+UndoDinnerTable
 

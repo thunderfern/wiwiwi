@@ -2,13 +2,13 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 We will need a carrot. First, let's plant the seeds.
 
 Player
 Happy
-Null
-Then we will water and harvest!
+GibberishPlayer
+Then we will water and harvest.
 
 GOAL
 Collect

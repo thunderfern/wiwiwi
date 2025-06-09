@@ -12,7 +12,7 @@ This is so good!
 
 Player
 Happy
-Null
+GibberishPlayer
 Glad you like it!
 
 Opossum
@@ -27,12 +27,12 @@ I hope to find a family like yours one day!
 
 Player
 Neutral
-Null
+GibberishPlayer
 Speaking of which... 
 
 Player
 Happy
-Null
+GibberishPlayer
 Why don't you join ours? We still have more rooms open!
 
 Opossum
@@ -42,7 +42,7 @@ Really? Wow, thank you Miss!
 
 Player
 Happy
-Null
+GibberishPlayer
 Of course! The more, the merrier!
 
 GOAL
@@ -54,3 +54,15 @@ SETUP
 Unlock
 Home
 Opossum
+
+Position
+Mole
+UndoDinnerTable
+
+Position
+Opossum
+UndoDinnerTable
+
+Position
+Player
+UndoDinnerTable

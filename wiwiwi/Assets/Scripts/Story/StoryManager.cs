@@ -28,6 +28,7 @@ public class StoryManager : MonoBehaviour
 
     public List<TextAsset> storyFiles;
     public List<GameObject> characterObj;
+    public List<GameObject> sittingObj;
     public GameObject boat;
     public GameObject fishing;
     public GameObject moleHome;
@@ -35,9 +36,14 @@ public class StoryManager : MonoBehaviour
     public GameObject oppHome;
     public GameObject crate;
 
+    void Start()
+    {
+        for (int i = 0; i < sittingObj.Count; i++) sittingObj[i].SetActive(false);    
+    }
+
     public void read(StoryPart storyPart)
     {
-        if (storyPart == StoryPart.Platypus01) characterObj[2].SetActive(true);
+
         Debug.Log(storyPart);
         TextAsset parseFile = storyFiles[(int)storyPart];
 

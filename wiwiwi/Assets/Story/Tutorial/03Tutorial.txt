@@ -2,7 +2,7 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 Why hello Mr. Mole, it's quite rare to see a new face around here. How can I help you today?
 
 Mr. Mole
@@ -22,22 +22,22 @@ Null
 
 Player
 Happy
-Null
+GibberishPlayer
 Oh, don’t be sorry Mr. Mole!
 
 Player
 Happy
-Null
+GibberishPlayer
 Why don’t you stay for dinner?
 
 Mr. Mole
 Happy
-Null
+GibberishMole
 I would love to, if it isn’t an inconvenience.
 
 Player
 Happy
-Null
+GibberishPlayer
 Not at all! Please come on in! Let me show you to the dining room.
 
 GOAL

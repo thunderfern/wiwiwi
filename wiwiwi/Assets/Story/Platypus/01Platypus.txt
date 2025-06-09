@@ -7,12 +7,12 @@ Huh? Who’s there?
 
 Player
 Neutral
-Null
+GibberishPlayer
 A platypus?
 
 Player
 Happy
-Null
+GibberishPlayer
 Hi! I live in the burrow near here, how do you do?
 
 Mr. Platypus
@@ -32,7 +32,7 @@ Null
 
 Player
 Happy
-Null
+GibberishPlayer
 Don't worry Mister, I will catch you some fish!
 
 Mr. Platypus
@@ -42,7 +42,7 @@ I appreciate the help little one, here is my old fishing rod. Please be careful 
 
 Player
 Happy
-Null
+GibberishPlayer
 Leave it to me!
 
 GOAL

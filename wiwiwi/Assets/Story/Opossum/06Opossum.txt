@@ -2,22 +2,22 @@ DIALOGUE
 
 Player
 Neutral
-Null
+GibberishPlayer
 Oh no! 
 
 Mr. Mole
 Shocked
 GibberishMole
-...she ran off...
+...She ran off...
 
 Player
 Thinking
-Null
+GibberishPlayer
 I think she lives somewhere in the forest...
 
 Player
 Neutral
-Null
+GibberishPlayer
 I'll go look for her right now!
 
 GOAL

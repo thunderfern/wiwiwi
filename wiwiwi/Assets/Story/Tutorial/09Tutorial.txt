@@ -2,13 +2,13 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 Perfect! I already have tomato, so we don't have to go searching for one.
 
 
 Player
 Happy
-Null
+GibberishPlayer
 Okay! Let's go make the soup now! We will head to the kitchen.
 
 GOAL

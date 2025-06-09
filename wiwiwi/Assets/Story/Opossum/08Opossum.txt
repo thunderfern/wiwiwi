@@ -32,7 +32,7 @@ Okay! Thank you!
 
 Player
 Happy
-Null
+GibberishPlayer
 Let's make the soup!
 
 GOAL
@@ -43,8 +43,8 @@ Opossum09
 SETUP
 Position
 Opossum
-DiningTable
+DinnerTable
 
 Position
 Mole
-DiningTable
+DinnerTable

@@ -2,7 +2,7 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 Alright!, lets go to the garden to collect the vegetables for Mr. Mole!
 
 GOAL

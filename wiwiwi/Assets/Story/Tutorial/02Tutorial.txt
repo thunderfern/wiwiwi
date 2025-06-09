@@ -2,12 +2,12 @@ DIALOGUE
 
 Player
 Neutral
-Null
+GibberishPlayer
 Oh, I think it's Mr. Mole!
 
 GOAL
 Interact
-Mr. Mole
+Mole
 Tutorial03
 
 SETUP

@@ -8,6 +8,7 @@ public class InteractMain : MonoBehaviour
     public GameObject obj;
     public GameObject colObj;
     public bool interactable;
+    public float dist;
     private bool colliding;
 
     public InteractMain(GameObject obj, LayerMask layermask)
@@ -26,8 +27,8 @@ public class InteractMain : MonoBehaviour
         }
         else obj.layer = (int)Mathf.Log(objlayermask.value, 2);
         if (World.instance().curstate != GameState.Platformer && World.instance().curstate != GameState.Boating) return false;
-        RaycastHit2D leftray = Physics2D.Raycast(obj.transform.position, Vector2.left, 2f, layermask);
-        RaycastHit2D rightray = Physics2D.Raycast(obj.transform.position, Vector2.right, 2f, layermask);
+        RaycastHit2D leftray = Physics2D.Raycast(obj.GetComponent<Collider2D>().bounds.center, Vector2.left, 2f + dist, layermask);
+        RaycastHit2D rightray = Physics2D.Raycast(obj.GetComponent<Collider2D>().bounds.center, Vector2.right, 2f + dist, layermask);
         if (leftray && leftray.collider.gameObject == colObj)
         {
             if (objlayermask == (1 << LayerMask.NameToLayer("InteractableE")))

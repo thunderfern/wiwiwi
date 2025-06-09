@@ -10,6 +10,7 @@ public class PlayerMain : MonoBehaviour {
     public LayerMask groundLayer;
     public GameObject interactableE;
     public GameObject interactableB;
+    public Vector3 cameraOffset;
 
     public bool isGrounded;
 
@@ -22,11 +23,12 @@ public class PlayerMain : MonoBehaviour {
     {
         movementState = new Idle();
         isGrounded = true;
+        cameraOffset = Camera.main.transform.position - obj.transform.position;
     }
 
     void Update()
     {
-        Debug.Log(interactableB);
+        Camera.main.transform.position = new Vector3(Mathf.Min(Mathf.Max(-34.7f, obj.transform.position.x + cameraOffset.x), 115.5f), Mathf.Max(cameraOffset.y + obj.transform.position.y, -21.93f), cameraOffset.z + obj.transform.position.z);
     }
 
     // For physics updates
@@ -39,8 +41,8 @@ public class PlayerMain : MonoBehaviour {
         }
 
         // interactable e
-        RaycastHit2D leftray = Physics2D.Raycast(obj.transform.position, Vector2.left, 10f, 1 << LayerMask.NameToLayer("InteractableE"));
-        RaycastHit2D rightray = Physics2D.Raycast(obj.transform.position, Vector2.right, 10f, 1 << LayerMask.NameToLayer("InteractableE"));
+        RaycastHit2D leftray = Physics2D.Raycast(obj.transform.position, Vector2.left, 15f, 1 << LayerMask.NameToLayer("InteractableE"));
+        RaycastHit2D rightray = Physics2D.Raycast(obj.transform.position, Vector2.right, 15f, 1 << LayerMask.NameToLayer("InteractableE"));
         if (leftray && !rightray) interactableE = leftray.collider.gameObject;
         else if (!leftray && rightray) interactableE = rightray.collider.gameObject;
         else if (rightray && leftray)
@@ -51,8 +53,8 @@ public class PlayerMain : MonoBehaviour {
         else interactableE = null;
 
         // interactable b
-        leftray = Physics2D.Raycast(obj.transform.position, Vector2.left, 10f, 1 << LayerMask.NameToLayer("InteractableB"));
-        rightray = Physics2D.Raycast(obj.transform.position, Vector2.right, 10f, 1 << LayerMask.NameToLayer("InteractableB"));
+        leftray = Physics2D.Raycast(obj.transform.position, Vector2.left, 15f, 1 << LayerMask.NameToLayer("InteractableB"));
+        rightray = Physics2D.Raycast(obj.transform.position, Vector2.right, 15f, 1 << LayerMask.NameToLayer("InteractableB"));
         if (leftray && !rightray)
         {
             interactableB = leftray.collider.gameObject;

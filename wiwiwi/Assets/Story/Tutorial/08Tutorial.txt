@@ -7,7 +7,7 @@ Great!
 
 Player
 Happy
-Null
+GibberishPlayer
 We will also need onion for the soup.
 
 GOAL

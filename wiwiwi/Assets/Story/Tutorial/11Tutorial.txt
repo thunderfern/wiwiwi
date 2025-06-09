@@ -2,12 +2,12 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 Great, the soup is all done! Let's go serve it to Mr. Mole and eat together!
 
 GOAL
 Go
-DiningRoom
+DinnerTable
 Tutorial12
 
 SETUP

@@ -6,6 +6,7 @@ public class CookingIcon : MonoBehaviour
     private InteractMain interaction;
     public GameObject potObj;
     public GameObject cookingObj;
+    public GameObject alertInteraction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +18,7 @@ public class CookingIcon : MonoBehaviour
     {
         if (interaction.allowInteraction())
         {
+            alertInteraction.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 potObj.GetComponent<Pot>().resetPot();
@@ -25,6 +27,7 @@ public class CookingIcon : MonoBehaviour
                 cookingObj.SetActive(true);
             }
         }
+        else alertInteraction.SetActive(false);
         
     }
 }

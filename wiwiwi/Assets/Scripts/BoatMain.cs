@@ -13,6 +13,8 @@ public class BoatMain : MonoBehaviour
     public GameObject leftcol;
     public GameObject rightcol;
     private GameObject boatBack;
+    public GameObject invIcon;
+    public GameObject recipeIcon;
     private float xchange;
     private Vector3 mcoffset;
     private Vector3 boatBackOffset;
@@ -20,6 +22,7 @@ public class BoatMain : MonoBehaviour
     public Sprite sailIn;
     private Vector3 leftPlayerPos;
     private Vector3 rightPlayerPos;
+    public GameObject alertInteraction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,9 +33,10 @@ public class BoatMain : MonoBehaviour
         leftinteraction = leftcol.GetComponent<InteractMain>();
         rightinteraction = rightcol.GetComponent<InteractMain>();
         xchange = 0;
-        mcoffset = new Vector3(37.02f - obj.transform.position.x, -0.82f - obj.transform.position.y, 0);
+        mcoffset = new Vector3(39.78f - obj.transform.position.x, -0.82f - obj.transform.position.y, 0);
         boatBackOffset = new Vector3(boatBack.transform.position.x - obj.transform.position.x, boatBack.transform.position.y - obj.transform.position.y, 0);
         boatSpeed = 3f;
+        obj.SetActive(false);
 
         /*Debug.Log(37.02f - obj.transform.position.x - pond.transform.position.x);
         Debug.Log(obj.transform.position.x);
@@ -42,8 +46,19 @@ public class BoatMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        alertInteraction.SetActive(false);
+        if (playerObj.transform.position.x < obj.transform.position.x)
+        {
+            alertInteraction.transform.position = new Vector3(-4.89f + obj.transform.position.x, -4.72f + obj.transform.position.y, 0);
+        }
+        else
+        {
+            alertInteraction.transform.position = new Vector3(4.89f + obj.transform.position.x, -4.72f + obj.transform.position.y, 0);
+        }
         if (World.instance().curstate == GameState.Boating)
         {
+            invIcon.SetActive(false);
+            recipeIcon.SetActive(false);
             Camera.main.orthographicSize = 10f;
             if (Input.GetKey(KeyCode.D)) xchange = boatSpeed;
             else if (Input.GetKey(KeyCode.A)) xchange = -boatSpeed;
@@ -59,6 +74,7 @@ public class BoatMain : MonoBehaviour
 
             if (rightinteraction.allowInteraction())
             {
+                alertInteraction.SetActive(true);
                 if (xchange > 0) xchange = 0;
                 if (Input.GetKeyDown(KeyCode.B))
                 {
@@ -71,12 +87,15 @@ public class BoatMain : MonoBehaviour
 
             if (leftinteraction.allowInteraction())
             {
+                alertInteraction.SetActive(true);
                 if (xchange < 0) xchange = 0;
                 if (Input.GetKeyDown(KeyCode.B))
                 {
                     playerObj.transform.position = new Vector3(leftPlayerPos.x, leftPlayerPos.y, playerObj.transform.position.z);
                     Camera.main.orthographicSize = 5f;
                     World.instance().curstate = GameState.Platformer;
+                    invIcon.SetActive(true);
+                    recipeIcon.SetActive(true);
                     return;
                 }
             }
@@ -110,6 +129,7 @@ public class BoatMain : MonoBehaviour
         }
         else if (interaction.allowInteraction())
         {
+            alertInteraction.SetActive(true);
             if (Input.GetKeyDown(KeyCode.B))
             {
                 World.instance().curstate = GameState.Boating;

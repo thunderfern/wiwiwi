@@ -54,11 +54,15 @@ public class DialogueManager : MonoBehaviour {
         {
             if (dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters < dialogueStream[0].dialogueText.Length)
             {
+                AudioManager.instance().PlaySound(dialogueStream[0].audio);
                 curTextTimer += Time.deltaTime;
                 dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters = (int)(curTextTimer * 20);
                 if (Input.GetKeyDown(KeyCode.E)) dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters = dialogueStream[0].dialogueText.Length;
             }
             else if (Input.GetKeyDown(KeyCode.E)) displayNext();
+            else if (dialogueText.GetComponent<TMP_Text>().maxVisibleCharacters >= dialogueStream[0].dialogueText.Length) { 
+                AudioManager.instance().StopSound(dialogueStream[0].audio);
+            }
         }
     }
 
@@ -103,6 +107,7 @@ public class DialogueManager : MonoBehaviour {
         if (dialogueStream.Count == 0) {
             for (int i = 0; i < setupStream.Count; i++)
             {
+                Debug.Log("now!");
                 setupStream[i].setup();
             }
             World.instance().curstate = World.instance().prevstate[0];

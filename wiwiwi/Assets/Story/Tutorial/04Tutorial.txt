@@ -2,12 +2,12 @@ DIALOGUE
 
 Player
 Neutral
-Null
+GibberishPlayer
 Please take a seat while I prepare the soup.
 
 Player
 Happy
-Null
+GibberishPlayer
 Mr. Mole, what kind of soup would you like?
 
 Mr. Mole
@@ -17,7 +17,7 @@ Carrot soup. I used to have it back in my hometown.
 
 Player
 Happy
-Null
+GibberishPlayer
 I'll go prepare it right away! I will go to the kitchen to start the stove.
 
 GOAL

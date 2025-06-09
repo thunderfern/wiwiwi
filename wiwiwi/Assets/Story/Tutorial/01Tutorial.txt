@@ -7,12 +7,12 @@ Once upon a time, there was a little mouse who was eating all alone in her tiny 
 
 Player
 Shocked
-Null
+GibberishPlayer
 Oh my goodness, I made too much soup again!
 
 Player
 Sad
-Null
+GibberishPlayer
 Oh, how I wish I wasn’t an orphan so I could have others to eat with.
 
 Unknown
@@ -22,12 +22,12 @@ Knock
 
 Player
 Neutral
-Null
+GibberishPlayer
 Who could it be?
 
 Player
 Neutral
-Null
+GibberishPlayer
 Let's go check the top of the burrow.
 
 GOAL

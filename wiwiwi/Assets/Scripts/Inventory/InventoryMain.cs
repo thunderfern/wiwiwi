@@ -24,7 +24,7 @@ public class InventoryMain : MonoBehaviour
         entries = new List<GameObject>();
         entryClickers = new List<ClickMain>();
 
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 14; i++)
         {
             GameObject tmp = Instantiate(sampleEntry, obj.transform);
             tmp.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[i];
@@ -32,7 +32,7 @@ public class InventoryMain : MonoBehaviour
             tmp.transform.position = new Vector3(sampleEntry.transform.position.x + 1.3f * (i % 3), sampleEntry.transform.position.y - 1.3f * (i / 3), sampleEntry.transform.position.z);
             entries.Add(tmp);
         }
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 14; i++)
         {
             ClickMain tmpClick = new ClickMain(entries[i]);
             entryClickers.Add(tmpClick);
@@ -46,7 +46,7 @@ public class InventoryMain : MonoBehaviour
         {
             obj.SetActive(false);
         }
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 14; i++)
         {
             entries[i].transform.GetChild(3).GetChild(0).gameObject.GetComponent<TMP_Text>().text = Convert.ToString(Inventory.instance().getNumIngredient((Collectible)(i)));
         }
@@ -58,14 +58,14 @@ public class InventoryMain : MonoBehaviour
                 World.instance().prevstate.RemoveAt(0);
             }
         }
-        getItem();
+        //getItem();
     }
 
     public Tuple<Collectible, GameObject> getItem()
     {
         Tuple<Collectible, GameObject> tmpans;
         if (Input.GetMouseButtonDown(0)) {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 14; i++)
             {
                 if (entryClickers[i].hover())
                 {

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      veggierack_0: -1908084985899174601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,6 +14,6 @@ public class FixedPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        obj.transform.position = originalPos + new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0);
+        obj.transform.position = new Vector3(Mathf.Min(Mathf.Max(-34.7f, Camera.main.transform.position.x), 115.5f) + originalPos.x, Camera.main.transform.position.y + originalPos.y, obj.transform.position.z);
     }
 }

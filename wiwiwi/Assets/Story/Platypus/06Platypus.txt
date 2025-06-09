@@ -2,12 +2,12 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 The soup is done now. Let's meet the others in the dining room!
 
 GOAL
 Go
-DiningRoom
+DinnerTable
 Platypus07
 
 SETUP

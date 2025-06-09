@@ -7,6 +7,7 @@ public class FarmCollect : MonoBehaviour
     public GameObject obj;
     public Collectible collectible;
     public List<Sprite> spriteList;
+    public GameObject alertInteraction;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class FarmCollect : MonoBehaviour
         if (collectible == Collectible.Potato) obj.GetComponent<SpriteRenderer>().sprite = spriteList[3];
         if (interaction.allowInteraction())
         {
+            alertInteraction.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Inventory.instance().addIngredient(collectible);
@@ -31,5 +33,6 @@ public class FarmCollect : MonoBehaviour
                 obj.SetActive(false);
             }
         }
+        else alertInteraction.SetActive(false);
     }
 }

@@ -2,22 +2,22 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 Let's cook the soup!
 
 Player
 Happy
-Null
+GibberishPlayer
 We will need to drag our ingredients into the pot and then set it to cook.
 
 Player
 Happy
-Null
+GibberishPlayer
 Don't worry if you put in the wrong ingredient! We can click it again to remove it.
 
 Player
 Happy
-Null
+GibberishPlayer
 Let's make the carrot soup for Mr. Mole!
 
 GOAL

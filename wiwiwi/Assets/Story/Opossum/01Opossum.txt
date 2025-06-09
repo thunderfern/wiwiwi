@@ -3,7 +3,7 @@ DIALOGUE
 Player 
 Thinking
 Null
-What is this crate doing here?
+<i>What is this crate doing here?</i>
 
 Opossum
 Shocked
@@ -12,22 +12,22 @@ Ahhh!
 
 Player 
 Shocked
-Null
-Woah! You Scared me!
+GibberishPlayer
+Woah! You scared me!
 
 Opossum
 Scared
-Null
+GibberishOpossum
 A-A I-!
 
 Player
 Happy
-Null
+GibberishPlayer
 Its okay, I won't hurt you. 
 
 Player
 Happy
-Null
+GibberishPlayer
 This is my first time seeing an Opossum around here! What brings you here?
 
 Opossum
@@ -42,7 +42,7 @@ Null
 
 Player
 Happy
-Null
+GibberishPlayer
 Oh, sorry about that! It's been getting more lively in my burrow since my family keeps growing!
 
 Opossum
@@ -52,7 +52,7 @@ Y-your family?
 
 Player
 Happy
-Null
+GibberishPlayer
 Yeah! Would you like to come meet them? We can have soup together!
 
 Opossum
@@ -62,12 +62,12 @@ Maybe...
 
 Player
 Thinking
-Null
+GibberishPlayer
 I think Mr. Mole was planning to make mushroom soup today! 
 
 Player
 Happy
-Null
+GibberishPlayer
 Do you like mushroom soup?
 
 Opossum
@@ -77,12 +77,12 @@ GibberishOpossum
 
 Player
 Happy
-Null
+GibberishPlayer
 Great! Let's go collect the ingredients for it! 
 
 Player
 Thinking
-Null
+GibberishPlayer
 Although I'm not sure where to get mushrooms from...
 
 Opossum

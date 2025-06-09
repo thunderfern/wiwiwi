@@ -113,6 +113,7 @@ public enum Location
     Garden,
     DiningRoom,
     Forest,
+    DinnerTable,
     Pond
 }
 
@@ -132,8 +133,9 @@ public enum AudioType
     WateringPlants,
     Knock,
     GibberishMole,
-    GibberishOpossum,
     GibberishPlatypus,
+    GibberishOpossum,
+    GibberishPlayer,
     RainThunder,
     Null
 }

@@ -22,7 +22,7 @@ Yes...It's my old companion that has kept me company while fishing around. I can
 
 Player
 Awkward
-Null
+GibberishPlayer
 Mister...can you really give up something that important to me?
 
 Mr. Platypus
@@ -32,7 +32,7 @@ Of course, its been a long time since I could use it. I've only kept it around b
 
 Player
 Happy
-Null
+GibberishPlayer
 ...I'll be sure to use it to catch a lot of fish for you, Mister!
 
 Mr. Platypus

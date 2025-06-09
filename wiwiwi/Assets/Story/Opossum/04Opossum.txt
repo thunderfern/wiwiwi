@@ -7,7 +7,7 @@ Did you find the mushrooms?
 
 Player
 Happy
-Null
+GibberishPlayer
 Yep! Let's go to my burrow. We'll head to the kitchen.
 
 GOAL

@@ -2,7 +2,7 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 Great! I have all the ingredients needed for fish soup. Let's make the soup!
 
 GOAL

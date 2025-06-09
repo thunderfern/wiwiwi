@@ -22,7 +22,7 @@ public class Goal
         goalType = (GoalType)Enum.Parse(typeof(GoalType), a);
         if (goalType == GoalType.Interact)
         {
-            character = Mapper.instance().characterMap[b];
+            character = (Character)Enum.Parse(typeof(Character), b);
             StoryManager.instance().characterObj[(int)character].GetComponent<InteractMain>().interactable = true;
         }
         else if (goalType == GoalType.Go)
@@ -42,6 +42,11 @@ public class Goal
 
     public void goalComplete()
     {
+        if (goalType == GoalType.Go && location == Location.DinnerTable)
+        {
+            World.instance().mainCharacter.GetComponent<SpriteRenderer>().enabled = false;
+            StoryManager.instance().sittingObj[(int)Character.Player].SetActive(true);
+        }
         StoryManager.instance().read(nextAction);
     }
 

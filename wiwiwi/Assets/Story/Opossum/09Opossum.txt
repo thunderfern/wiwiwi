@@ -2,15 +2,15 @@ DIALOGUE
 
 Player
 Happy
-Null
+GibberishPlayer
 I think Opossum will really appreciate this!
 
 Player
 Happy
-Null
+GibberishPlayer
 They are already at the dining room, so lets join them!
 
 GOAL
 Go
-DiningRoom
+DinnerTable
 Opossum10

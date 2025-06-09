@@ -17,12 +17,12 @@ Ehe!
 
 Player
 Neutral
-Null
+GibberishPlayer
 Do you like soup Mister?
 
 Player
 Happy
-Null
+GibberishPlayer
 Soup is my specialty! Would you like to come to my burrow and have lunch with us?
 
 Mr. Platypus
@@ -32,7 +32,7 @@ I would love to join you. Soup would be fantastic! It's your fish after all.
 
 Player
 Happy
-Null
+GibberishPlayer
 Great! Let's head to the kitchen.
 
 GOAL

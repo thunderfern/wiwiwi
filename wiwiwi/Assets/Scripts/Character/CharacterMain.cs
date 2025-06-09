@@ -7,6 +7,7 @@ public class CharacterMain : MonoBehaviour
     private InteractMain interaction;
     public GameObject obj;
     public Character character;
+    public GameObject alertInteraction;
 
     void Awake()
     {
@@ -19,10 +20,15 @@ public class CharacterMain : MonoBehaviour
     {
         if (interaction.allowInteraction())
         {
+            alertInteraction.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (World.instance().goal.character == this.character && World.instance().goal.goalType == GoalType.Interact) World.instance().goal.goalComplete();
             }
+        }
+        else
+        {
+            alertInteraction.SetActive(false);
         }
 
     }

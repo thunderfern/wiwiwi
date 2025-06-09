@@ -12,7 +12,7 @@ This is the best fish soup I've ever had! It reminds me of my mother's cooking.
 
 Player
 Thinking
-Null
+GibberishPlayer
 Is your mother a fisher too?
 
 Mr. Platypus
@@ -52,7 +52,7 @@ Null
 
 Player
 Happy
-Null
+GibberishPlayer
 We'll be your family Mister!
 
 Mr. Platypus
@@ -77,12 +77,12 @@ My back's all worn out and I cant even catch fish anymore.
 
 Player
 Happy
-Null
+GibberishPlayer
 But you helped me learn how to fish!
 
 Player
 Happy
-Null
+GibberishPlayer
 If you stay with us you can teach us how to fish and we can continue your lineage of fishermen as family!
 
 Mr. Platypus
@@ -114,3 +114,19 @@ SETUP
 Unlock
 Action
 Boat
+
+Position
+Mole
+UndoDinnerTable
+
+Position
+Player
+UndoDinnerTable
+
+Position
+Platypus
+UndoDinnerTable
+
+Position
+Platypus
+Pond

@@ -47,7 +47,7 @@ I love fish soup! Please have a seat while me and Little Mouse prepare it for yo
 
 Player
 Happy
-Null
+GibberishPlayer
 Great! First we will need a tomato.
 
 GOAL

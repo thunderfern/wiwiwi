@@ -21,38 +21,45 @@ public class Setup
             GameObject charObj = StoryManager.instance().characterObj[(int)curchar];
             if (arg3 == "DiningRoom")
             {
-                charObj.transform.position = new Vector3(-17.7f, -12.8f, charObj.transform.position.z);
+                charObj.transform.position = new Vector3(-18.11f, -13.22f, charObj.transform.position.z);
             }
             else if (arg3 == "DinnerTable")
             {
-                if (curchar == Character.Mole)
+                StoryManager.instance().characterObj[(int)curchar].SetActive(false);
+                StoryManager.instance().sittingObj[(int)curchar].SetActive(true);
+            }
+            else if (arg3 == "UndoDinnerTable")
+            {
+                if (curchar == Character.Player)
                 {
-                    charObj.transform.position = new Vector3(-20.7f, -12.8f, charObj.transform.position.z);
+                    World.instance().mainCharacter.GetComponent<SpriteRenderer>().enabled = true;
+                    StoryManager.instance().sittingObj[(int)curchar].SetActive(false);
                 }
-                else if (curchar == Character.Opossum)
+                else
                 {
-                    charObj.transform.position = new Vector3(-35.66f, -13.41f, charObj.transform.position.z);
+                    StoryManager.instance().characterObj[(int)curchar].SetActive(true);
+                    StoryManager.instance().sittingObj[(int)curchar].SetActive(false);
                 }
             }
             else if (arg3 == "KitchenLeft")
             {
-                charObj.transform.position = new Vector3(-5.32f, -8.37f, charObj.transform.position.z);
+                charObj.transform.position = new Vector3(-0.94f, -8.59f, charObj.transform.position.z);
             }
             else if (arg3 == "KitchenMiddle")
             {
-                charObj.transform.position = new Vector3(0.18f, -8.74f, charObj.transform.position.z);
+                charObj.transform.position = new Vector3(1.45f, -8.67f, charObj.transform.position.z);
             }
             else if (arg3 == "Cave")
             {
-                charObj.transform.position = new Vector3(-33.46f, 0.02f, charObj.transform.position.z);
+                charObj.transform.position = new Vector3(-32.86f, 0.35f, charObj.transform.position.z);
             }
             else if (arg3 == "Forest")
             {
-                charObj.transform.position = new Vector3(-17.73f, 0.12f, charObj.transform.position.z);
+                charObj.transform.position = new Vector3(-19.18f, 0.7f, charObj.transform.position.z);
             }
             else if (arg3 == "Pond")
             {
-                charObj.transform.position = new Vector3(24.01f, -0.77f, charObj.transform.position.z);
+                charObj.transform.position = new Vector3(24.3f, -0.6f, charObj.transform.position.z);
             }
             else Debug.Log("neglected\n");
         }
