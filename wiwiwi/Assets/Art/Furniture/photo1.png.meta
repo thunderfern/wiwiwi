@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 529cf4ad019828041bf516799923c782
+guid: cbc47f7556b4948fbba79984038a8c71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7164293449676804438
-    second: item_carrot_soup_0
+      213: 3206288760120457463
+    second: photo1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: item_carrot_soup_0
+      name: photo1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 241
-        height: 152
+        y: 0
+        width: 383
+        height: 294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 651d4a63feeac6360800000000000000
-      internalID: 7164293449676804438
+      spriteID: 7f8be42c3a60f7c20800000000000000
+      internalID: 3206288760120457463
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      item_carrot_soup_0: 7164293449676804438
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

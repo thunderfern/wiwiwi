@@ -19,11 +19,12 @@ public class Door : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == g)
         {
             GetComponent<SpriteRenderer>().sprite = doorState[1];
+            transform.position = new Vector3(4f, 0f, 0f);
 
         }
 
@@ -33,6 +34,7 @@ public class Door : MonoBehaviour
         if (other.gameObject == g)
         {
             GetComponent<SpriteRenderer>().sprite = doorState[0];
+            transform.position = new Vector3(-4f, 0f, 0f);
         }
     }
     
